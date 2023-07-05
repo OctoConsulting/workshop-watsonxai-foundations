@@ -1,0 +1,9 @@
+apiVersion: v0
+name: customer_factsheet
+content: |
+  input: "{{name_1}} {{family_name_1}} is {{age_1}} years old and lives in {{city_1}}, {{state_1}}. Their purchase history includes {{purchase_history_1}}."
+  output: "Recommendations:\n Item 1: {{recommendation_1_1}}\nItem 2: {{recommendation_2_1}}"
+  input: "{{name_2}} {{family_name_2}} is {{age_2}} years old and lives in {{city_2}}, {{state_2}}. Their purchase history includes {{purchase_history_2}}."
+  output: "Recommendations:\n Item 1: {{recommendation_1_2}}\nItem 2: {{recommendation_2_2}}"
+  input: "{{name_3}} {{family_name_3}} is {{age_3}} years old and lives in {{city_3}}, {{state_3}}. Their purchase history includes {{purchase_history_3}}."
+  output: ""

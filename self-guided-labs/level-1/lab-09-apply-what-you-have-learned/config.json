@@ -1,0 +1,15 @@
+{
+	"input_file_path": "data/data_classification.csv",
+	"temp_path": "temp",
+	"output_path": "output",
+	"output_file": "output.csv",
+	"misclassified_file_path": "misclassified.csv",
+	"input_value": "narrative",
+	"original_category": "classification",
+	"classifications": ["credit_card", "retail_banking", "credit_reporting", "mortgages_and_loans", "debt_collection"],
+    "output_file_header": ["index", "predicted_category", "narrative"], 
+	"sample_percent": 0.5,
+	"params": {
+		"decoding_method": "greedy"
+	}
+}

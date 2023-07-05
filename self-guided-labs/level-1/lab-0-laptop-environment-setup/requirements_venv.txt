@@ -1,0 +1,14 @@
+chromadb
+ibm-generative-ai
+ipywidgets
+jupyter
+langchain
+matplotlib
+pandas
+plotly
+pypdf
+python-dotenv
+requests
+rouge
+sentence-transformers
+streamlit
