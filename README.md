@@ -28,7 +28,7 @@ Start by cloning this entire repo so you have all notebooks, datasets and relate
 | 30 mins  | Lab 3: [IBM GenAI and Prompt Patterns](./self-guided-labs/level-1/lab-03-genai-and-prompt-patterns) | 
 | 15 mins  | Lab 4: [Accessing Watsonx.ai via REST API](./self-guided-labs/level-1/lab-04-genai-rest-api) | 
 | 30 mins  | Lab 5: [Lang Chain and IBM's GenAI Library](./self-guided-labs/level-1/lab-05-genai-and-langchain) | 
-| 30 mins  | Lab 6: [Retrieval Agumented Generation (RAG) for Contextual Search](./self-guided-labs/level-1/lab-06-retrieval-agumented-generation) |
+| 30 mins  | Lab 6: [Retrieval Augmented Generation (RAG) for Contextual Search](./self-guided-labs/level-1/lab-06-retrieval-agumented-generation) |
 | 15 mins  | Lab 7: [Watsonx.ai Demo in Streamlit](./self-guided-labs/level-1/lab-07-watsonxai-demo-with-streamlit) | 
 |  5 mins  | [Intro to Watson Code Assistant](https://ibm.box.com/s/lx4xbdjtc7p13yf950ou88bl8d5qbj3y) | 
 | 45 mins  | Lab 8: [Watson Code Assistant and Ansible Lightspeed](./self-guided-labs/level-1/lab-08-watson-code-assistant) | 
