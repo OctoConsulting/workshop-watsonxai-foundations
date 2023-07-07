@@ -1,7 +1,7 @@
 # IBM Foundation Models
 
 ## Required Viewing
-[Watch the first 10:50 mins of this deep dive into the foundations of WatsonX.ai](https://ibmtechxchange.bemyapp.com/?mc_cid=cf7717a08c&mc_eid=b54f2c4c9f#/conference/648a45ae1cbdaaa41ab61852) by Kate Soule, Senior Manager, MIT-IBM Watson AI Lab, from the Q2 2023 IBM Tech Exchange.  She describes IBM data strategy for training models plus introduces the various IBM Foundation Models to-be-released in WatsonX.ai.  We recommend watching only those first 11 mins as we'll return to Kate's video and watch section of Tuning models later in the Boot Camp.
+[Watch the first 10:50 mins of this deep dive into the foundations of watsonx.ai](https://ibm.seismic.com/Link/Content/DC6GBT4VQcMGVGMHCjcD7fXXdRqP) by Kate Soule, Senior Manager, MIT-IBM Watson AI Lab, from the Q2 2023 IBM Tech Exchange.  She describes IBM data strategy for training models plus introduces the various IBM Foundation Models to-be-released in watsonx.ai.  We recommend watching only those first 11 mins as we'll return to Kate's video and watch section of Tuning models later in the Boot Camp.
 
 ## Foundation Model Roadmap
 Here are the key timelines for release of IBM's various foundation models.  You also can [read more details about the roadmap on Seismic](https://ibm.seismic.com/Link/Content/DCVfj4mQD7jGT8qTC7gW3qJHWmHP).
