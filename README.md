@@ -1,14 +1,7 @@
-# WatsonX.ai Boot Camp
-Welcome to the Watsonx.ai Boot Camp. Completing this Boot Camp will take roughly 8 hours.
+# Technical Hands-On Labs: Foundations of WatsonX.ai 
+Completing these technical hands-on labs will take roughly 16 hours plus another 2-3 hours to complete the Apply Lessons Learned labs. You should have completed the [attendee pre-requisites](attendee-prerequisites.md) prior to starting.
 
-
-## ATTENDEE PRE_REQUISITES
-Boot camp attendees should have completed these [attendee pre-requisites](attendee-prerequisites.md) prior to starting the videos and labs below.
-
-## Getting Started
-Start by cloning this entire repo so you have all notebooks, datasets and related files on your computer.  You can then proceeed to follow the agenda as shown below.
-
-## Agenda
+# Agenda
 ### What Is Watsonx.ai
 | **Time**        | **Topic** |
 |-----------------|-------------------|
@@ -22,15 +15,24 @@ Start by cloning this entire repo so you have all notebooks, datasets and relate
 | 30 mins  | Lab 0: [Setup Your Laptop Environment](./self-guided-labs/level-1/lab-0-laptop-environment-setup)|  
 |  5 mins  | [Generative AI Stack and Architecture](https://ibm.box.com/s/8imh3ymwmatab3x94u332fnzbg0tgq1z)   | 
 | 10 mins  | [Intro to Prompt Engineering](https://ibm.box.com/s/acqea8ukzmgzdel7gxp2fcrnqm8p7vvp)   |  
-| 45 mins  | Lab 1: [Intro Prompt Engineering Using Watsonx.ai Prompt Builder](./self-guided-labs/level-1/lab-01-intro-to-prompt-engineering) |  
-| 60 mins  | Lab 2: [Advanced Prompt Engineering Challenge](./self-guided-labs/level-1/lab-02-advanced-prompt-engineering)   |  
+| 90 mins  | Lab 1: [Intro Prompt Engineering Using Watsonx.ai Prompt Builder](./self-guided-labs/level-1/lab-01-intro-to-prompt-engineering) |  
+| 90 mins  | Lab 2: [Advanced Prompt Engineering Challenge](./self-guided-labs/level-1/lab-02-advanced-prompt-engineering)   |  
 |  5 mins  | [IBM GenAI Python library](https://ibm.box.com/s/ufqc0h9q6jc7f01yxym3ji32yqnuvpsl) | 
-| 30 mins  | Lab 3: [IBM GenAI and Prompt Patterns](./self-guided-labs/level-1/lab-03-genai-and-prompt-patterns) | 
-| 15 mins  | Lab 4: [Accessing Watsonx.ai via REST API](./self-guided-labs/level-1/lab-04-genai-rest-api) | 
-| 30 mins  | Lab 5: [Lang Chain and IBM's GenAI Library](./self-guided-labs/level-1/lab-05-genai-and-langchain) | 
-| 30 mins  | Lab 6: [Retrieval Augmented Generation (RAG) for Contextual Search](./self-guided-labs/level-1/lab-06-retrieval-agumented-generation) |
-| 15 mins  | Lab 7: [Watsonx.ai Demo in Streamlit](./self-guided-labs/level-1/lab-07-watsonxai-demo-with-streamlit) | 
+| 60 mins  | Lab 3: [IBM GenAI and Prompt Patterns](./self-guided-labs/level-1/lab-03-genai-and-prompt-patterns) | 
+| 30 mins  | Lab 4: [Accessing Watsonx.ai via REST API](./self-guided-labs/level-1/lab-04-genai-rest-api) | 
+| 60 mins  | Lab 5: [Lang Chain and IBM's GenAI Library](./self-guided-labs/level-1/lab-05-genai-and-langchain) | 
+| 60 mins  | Lab 6: [Retrieval Augmented Generation (RAG) for Contextual Search](./self-guided-labs/level-1/lab-06-retrieval-agumented-generation) |
+| 30 mins  | Lab 7: [Watsonx.ai Demo in Streamlit](./self-guided-labs/level-1/lab-07-watsonxai-demo-with-streamlit) | 
+
+### IBM Products Integrated With Watsonx.ai
+| **Time**        | **Topic** |
+|-----------------|-------------------|
 |  5 mins  | [Intro to Watson Code Assistant](https://ibm.box.com/s/lx4xbdjtc7p13yf950ou88bl8d5qbj3y) | 
-| 45 mins  | Lab 8: [Watson Code Assistant and Ansible Lightspeed](./self-guided-labs/level-1/lab-08-watson-code-assistant) | 
-| 60 mins  | Lab 9: [Applying What You've Learned](./self-guided-labs/level-1/lab-09-apply-what-you-have-learned) | 
-| 60 mins  | Lab 10: [Extra Credit](./self-guided-labs/level-1/lab-10-extra-credit) | 
+| 45 mins  | Lab 1: [Watson Code Assistant and Ansible Lightspeed](./self-guided-labs/products/lab-01-watson-code-assistant) | 
+
+### Apply Lessons Learned (CHOOSE ONE)
+You've made it to the end.  Almost. You will now apply the new skills that you've learned to the challenges below.  Be creative.  These challenges are specifically open-ended.  Combine your own unique skills to extend the use case solutions provided in these challenges.    
+| **Time**        | **Topic** |
+|-----------------|-------------------|
+| 2+ hours  | Challenge 1: [Text Classification of News Articles](./self-guided-labs/apply-lessons-learning/challenge-01) | 
+| 2+ hours  | Challenge 2: [RAG Search of SEC 10K Filings With Streamlit](./self-guided-labs/apply-lessons-learning/challenge-02) | 

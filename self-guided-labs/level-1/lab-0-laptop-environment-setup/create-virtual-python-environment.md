@@ -67,7 +67,9 @@ python -m pip install -r requirements_venv.txt
 
 You can validate that your environment is active by looking at the start of the prompt line in your terminal/console window.  As shown below, the start of the prompt changes to show (genai).
 
-![image](./images/environment-activated-python.png)
+<p align="left">
+  <img src="images/environment-activated-python.png" width="500"/>
+</p>
 
 #### Dectivate your Python virtual environment
 You deactivate your environment using the command below:
