@@ -39,8 +39,8 @@ Most development and data science teams within IBM (and outside) have selected V
 
 Go here to [install VS Code and configure it for your Python environment](vs-code.md)
 
-### 6: Access Watsonx.ai Workbench <a id="access-watsonxai-workbench"></a>
-Log in to the [Watsonx.ai Workbench](https://workbench.res.ibm.com/) to retrieve your API Key from the right-side of the home screen.  Save this key as we will be using it during the next step.  
+### 6: Access watsonx.ai Workbench <a id="access-watsonxai-workbench"></a>
+Log in to the [watsonx.ai Workbench](https://workbench.res.ibm.com/) to retrieve your API Key from the right-side of the home screen.  Save this key as we will be using it during the next step.  
 
 <p align="center">
   <img src="./images/watsonxai-api-key.png" width="600"/>
