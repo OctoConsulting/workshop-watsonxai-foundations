@@ -34,5 +34,5 @@ Completing these technical hands-on labs will take roughly 16 hours plus another
 You've made it to the end.  Almost. You will now apply the new skills that you've learned to the challenges below.  Be creative.  These challenges are specifically open-ended.  Combine your own unique skills to extend the use case solutions provided in these challenges.    
 | **Time**        | **Topic** |
 |-----------------|-------------------|
-| 2+ hours  | Challenge 1: [Text Classification of News Articles](./self-guided-labs/apply-lessons-learning/challenge-01) | 
-| 2+ hours  | Challenge 2: [RAG Search of SEC 10K Filings With Streamlit](./self-guided-labs/apply-lessons-learning/challenge-02) | 
+| 2+ hours  | Challenge 1: [Text Classification of News Articles](./self-guided-labs/apply-lessons-learned/challenge-01) | 
+| 2+ hours  | Challenge 2: [RAG Search of SEC 10K Filings With Streamlit](./self-guided-labs/apply-lessons-learned/challenge-02) | 
