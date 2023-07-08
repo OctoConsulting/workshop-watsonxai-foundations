@@ -32,16 +32,11 @@ You can validate that your environment is active by looking at the start of the 
 ![image](./images/environment-activated-conda.png)
 
 #### Installing libraries not in the default Conda channel
-Sometimes libraries are unavailable in Conda's default installation channel.  The easiest solution for those libraries is to usu "pip" to install them. So install the following libraries using pip by running the following commands one-at-a-time.  If you get an error about pip not being found, replace "pip" with "pip3" in the commands below.
+Sometimes libraries are unavailable in Conda's default installation channel.  The easiest solution for those libraries is to usu "pip" to install them. Run the following command install these additional librariestime.  If you get an error about pip not being found, replace "pip" with "pip3" in the commands below.
 ```
-pip install chromadb
-pip install sentence-transformers
-pip install ibm-generative-ai
-pip install langchain
-pip install pypdf
-pip install rouge
-pip install streamlit
+pip install -r requirements_conda_pip.txt
 ```
+
 ## Option 2: Python's Built-In Environments <a id="python-virtual-environment"></a>
 Python version 3.3 introduced [a built-in environments module called venv](https://docs.python.org/3/tutorial/venv.html), but few people used it until recently.  You may find using venv easier than Conda as it works directly with pip. 
 
