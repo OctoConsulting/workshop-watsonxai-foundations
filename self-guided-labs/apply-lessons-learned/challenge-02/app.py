@@ -73,7 +73,10 @@ if user_question:
 
     # Load model response into tabs
     document_path = join(ROOT_DIR, selected_company)
+    print("document_path: " + document_path)
+    print("user_question: " + user_question)
     matching_passages = sec_10k_search.get_matching_passages(document_path, user_question, passage_count_to_summarize)
+    print("matching_passages: " + str(len(matching_passages)))
     prompt, summary = sec_10k_search.answer_question(document_path, selected_company, user_question, not is_passages_enabled, passage_count_to_summarize)
     with tab_answer:
         # Streamlit uses Latex which uses the dollar sign (4) as a special character so we must escape it as below.

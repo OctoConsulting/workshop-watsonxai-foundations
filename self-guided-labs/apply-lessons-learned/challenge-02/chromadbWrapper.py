@@ -14,33 +14,36 @@ class MiniLML6V2EmbeddingFunction(EmbeddingFunction):
 
 class ChromaDBWrapper:
     
-    def __init__(self):
-        self.document_path = None
-
-    def load_document(self, document_path):
-
-        # Find passage document
-        self.document_path = document_path
+    def __init__(self, document_path):
+        self.load_documents(document_path)
+    
+    def load_documents(self, document_path):
+        # Find document with passages
+        
         for file in os.listdir(document_path):
             if file.endswith("_passages.parquet"):
                 parquet_file = os.path.join(document_path, file)
                 break
-
+        
         self.sec_10k_df = pd.read_parquet(parquet_file)
         self.sec_10k_passsages = self.sec_10k_df["text"].values.tolist()
         self.sec_10k_passsage_ids = self.sec_10k_df["passage_id"].values.tolist()
 
         self._client_settings = chromadb.config.Settings(
             chroma_db_impl="duckdb+parquet",
-            persist_directory=self.document_path
+            persist_directory=document_path
         )
         self._client = chromadb.Client(self._client_settings)
         self._collection = self._client.get_or_create_collection(name = f"sec_10k_minilm6v2", 
                                                                  embedding_function = MiniLML6V2EmbeddingFunction())
+        print("sec_10k_passsages: " +str(len(self.sec_10k_passsages)))
+
         self.initialize_db()
 
     def initialize_db(self):
+        print(f"self._collection.count(): {self._collection.count()}")
         if self.is_empty():
+            print("initializing db")
             _ = self.upsert_texts(
                 passsages = self.sec_10k_passsages,
                 # we handle tokenization, embedding, and indexing automatically. You can skip that and add your own embeddings as well
@@ -70,7 +73,5 @@ class ChromaDBWrapper:
         self._client.persist()
 
     # return: the closest result to the given question
-    def query(self, document_path:str, query_texts:str, n_results:int=5):
-        if self.document_path is not document_path:
-            self.load_document(document_path)
+    def query(self, query_texts:str, n_results:int=5):
         return self._collection.query(query_texts=query_texts, n_results=n_results)
