@@ -44,7 +44,7 @@ Summarize this topic from the Cloud Pak for Data docs: <a href="https://dataplat
   
 **Text content**
 
-Text to use: [topic_project-lib-for-python.txt](../data/project-lib-for-python.txt)
+Text to use: [project-lib-for-python.txt](../data/project-lib-for-python.txt)
 
 See: [Example answer](prompt-with-content-exercises-answers.md#1-summarize-documentation-topic)
 
@@ -63,7 +63,7 @@ List summary points for this topic from the Cloud Pak for Data docs: <a href="ht
   
 **Text content**
 
-Text to use: [topic_project-lib-for-python.txt](../data/project-lib-for-python.txt)
+Text to use: [project-lib-for-python.txt](../data/project-lib-for-python.txt)
 
 See: [Example answer](prompt-with-content-exercises-answers.md#2-documentation-topic-summary-points)
 
@@ -82,7 +82,7 @@ Generate study questions for this topic from the Cloud Pak for Data docs: <a hre
   
 **Text content**
 
-Text to use: [topic_project-lib-for-python.txt](../data/project-lib-for-python.txt)
+Text to use: [project-lib-for-python.txt](../data/project-lib-for-python.txt)
 
 See: [Example answer](prompt-with-content-exercises-answers.md#3-documentation-topic-study-questions)
 
@@ -101,7 +101,7 @@ Answer questions about this topic from the Cloud Pak for Data docs: <a href="htt
   
 **Text content**
 
-Text to use: [topic_project-lib-for-python.txt](../data/project-lib-for-python.txt)
+Text to use: [project-lib-for-python.txt](../data/project-lib-for-python.txt)
 
 See: [Example answer](prompt-with-content-exercises-answers.md#4-documentation-topic-answer-questions)
 
