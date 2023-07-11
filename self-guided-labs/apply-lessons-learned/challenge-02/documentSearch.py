@@ -15,7 +15,7 @@ class DocumentSearch:
     
     def __init__(self, model_parameters):
         self.load_model(model_parameters)
-        self.current_document_path = None
+        self.current_parquet_passage_file = None
         
     def load_model(self, model_parameters):
         # Load credentials 
@@ -34,38 +34,30 @@ class DocumentSearch:
                                 repetition_penalty=model_parameters["repetition_penalty"])
         self.llm = LangChainInterface(model=ModelType.FLAN_UL2, params=params, credentials=creds)
 
-    def answer_question(self, document_path, company_name, question, is_use_rag, passage_count_to_summarize):
+    def answer_question(self, parquet_passage_file, question, prompt_initial, is_rag_enabled, passage_count_to_summarize):
 
-        if is_use_rag:
-            question_prompt = f"Using these passages from the SEC 10K filed by {company_name}."
-            question_prompt += f"\n\n {PASSAGE_PLACEHOLDER}" 
-            question_prompt += f"\n\n Answer this question: {question}"
+        if is_rag_enabled:
+            matching_passages = self.get_matching_passages(parquet_passage_file, question, passage_count_to_summarize)
+            passages_str = ""
+            for i, passage in enumerate(matching_passages):
+                if i > 0:
+                    passages_str += "\n\n"
+                passages_str += f"passage #{i+1}: {passage}"
+            prompt_final = prompt_initial.replace(PASSAGE_PLACEHOLDER, passages_str)
         else:
-            question_prompt = f"Answer this question about {company_name}."
-            question_prompt += f"\nquestion: {question}"
+            prompt_final = prompt_initial
 
-        matching_passages = self.get_matching_passages(document_path, question, passage_count_to_summarize)
-        passages_str = ""
-        for i, passage in enumerate(matching_passages):
-            if i > 0:
-                passages_str += "\n\n"
-            passages_str += f"passage #{i+1}: {passage}"
+        summary = self.llm(prompt_final)
+        return prompt_final, summary
 
-        question_prompt = question_prompt.replace(PASSAGE_PLACEHOLDER, passages_str)
-        summary = self.llm(question_prompt)
-        return question_prompt, summary
-
-    def get_matching_passages(self, document_path, question, passage_count_to_summarize): 
-        if self.current_document_path is not document_path:
-            self.current_document_path = document_path
-            self.chromaDb = ChromaDBWrapper(document_path)
+    def get_matching_passages(self, parquet_passage_file, question, passage_count_to_summarize): 
+        if self.current_parquet_passage_file is not parquet_passage_file:
+            self.current_parquet_passage_file = parquet_passage_file
+            self.chromaDb = ChromaDBWrapper(parquet_passage_file)
        
         matches = self.chromaDb.query(query_texts=[question], n_results=passage_count_to_summarize)
         passages = []
         for passage in matches['documents'][0]:
-            # Streamlit uses Latex which uses the dollar sign (4) as a special character so we must escape it as below.
-            # https://discuss.streamlit.io/t/how-to-wrap-long-text-with-triggering-latex/33776
-            passage = passage.replace("$", "\$")
             passages.append(passage)
         return passages
 

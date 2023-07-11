@@ -16,6 +16,10 @@ Last on the bottom-left, you can manually configure the model parameters.
   <img src="images/sec-10k-demo.png" width="600"/>
 </p></kbd>
 
+## Install additional libraries
+In order to execute this Challenge, you will need to install these additional libraries
+- st-annotated-text (version >= 1.0.1)
+- streamlit-chat (version >= 0.1.1)
 
 ## Launch the demo app
 1. Open your terminal or console window

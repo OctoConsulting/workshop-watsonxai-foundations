@@ -14,24 +14,18 @@ class MiniLML6V2EmbeddingFunction(EmbeddingFunction):
 
 class ChromaDBWrapper:
     
-    def __init__(self, document_path):
-        self.load_documents(document_path)
+    def __init__(self, parquet_passage_file):
+        self.load_documents(parquet_passage_file)
     
-    def load_documents(self, document_path):
-        # Find document with passages
+    def load_documents(self, parquet_passage_file):
         
-        for file in os.listdir(document_path):
-            if file.endswith("_passages.parquet"):
-                parquet_file = os.path.join(document_path, file)
-                break
-        
-        self.sec_10k_df = pd.read_parquet(parquet_file)
+        self.sec_10k_df = pd.read_parquet(parquet_passage_file)
         self.sec_10k_passsages = self.sec_10k_df["text"].values.tolist()
         self.sec_10k_passsage_ids = self.sec_10k_df["passage_id"].values.tolist()
 
         self._client_settings = chromadb.config.Settings(
             chroma_db_impl="duckdb+parquet",
-            persist_directory=document_path
+            persist_directory=os.path.dirname(parquet_passage_file)
         )
         self._client = chromadb.Client(self._client_settings)
         self._collection = self._client.get_or_create_collection(name = f"sec_10k_minilm6v2", 
