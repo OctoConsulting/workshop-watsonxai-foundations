@@ -1,9 +1,5 @@
 # Prompts with content exercises
 
-For these exercises, we must use the _Big AI Models_ from IBM Research: [BAM](https://bam.res.ibm.com)
-
-Sample content of various types (eg. documentation topic, GitHub issue, Slack messages) is available here: [Sample content](../sample-content)
-
 **Exercises**
 
 <table>
@@ -120,7 +116,7 @@ Perform any task (eg. summarization, Q&A, classification) with other types of co
 
 **Text content**
 
-<a href="../sample-content">Sample content</a>
+<a href="../data">Additional example content to use</a>
 
 <img src="../images/sample-content.png" alt="Sample content" width="75%" />
 
