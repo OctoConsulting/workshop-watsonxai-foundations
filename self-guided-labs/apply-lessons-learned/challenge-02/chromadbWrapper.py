@@ -36,14 +36,10 @@ class ChromaDBWrapper:
         self._client = chromadb.Client(self._client_settings)
         self._collection = self._client.get_or_create_collection(name = f"sec_10k_minilm6v2", 
                                                                  embedding_function = MiniLML6V2EmbeddingFunction())
-        print("sec_10k_passsages: " +str(len(self.sec_10k_passsages)))
-
         self.initialize_db()
 
     def initialize_db(self):
-        print(f"self._collection.count(): {self._collection.count()}")
         if self.is_empty():
-            print("initializing db")
             _ = self.upsert_texts(
                 passsages = self.sec_10k_passsages,
                 # we handle tokenization, embedding, and indexing automatically. You can skip that and add your own embeddings as well

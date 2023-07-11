@@ -67,8 +67,6 @@ class DocumentSearch:
             # https://discuss.streamlit.io/t/how-to-wrap-long-text-with-triggering-latex/33776
             passage = passage.replace("$", "\$")
             passages.append(passage)
-        print("matches: " + str(matches))
-        print("passages: " + str(len(passages)))
         return passages
 
 
