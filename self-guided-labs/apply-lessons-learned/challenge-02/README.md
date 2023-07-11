@@ -1,4 +1,4 @@
-# Challenge 2 - SEC 10K Search Using LangChain and Streamlit 
+# Challenge 2 - SEC 10K Search Combining Streamlit with watsonx.ai
 
 ### Congratulations!
 You've made it this far and are still eager for more challenges?  Well we have another challenge, and it's somewhat open-ended.
