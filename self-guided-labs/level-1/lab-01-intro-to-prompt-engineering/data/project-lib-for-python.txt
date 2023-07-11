@@ -3,8 +3,8 @@ Last updated: May 15, 2023
 If you need to interact with your Watson Studio projects and project assets from a notebook, you can use the project-lib library for Python. The library is like a programmatical interface to a project.
 By using the project-lib library for Python, you can access project metadata and assets, including files and connections. The library also contains functions that simplify fetching files associated with the project.
 Note:
-	•	The project-lib functions do not encode or decode data when saving data to or getting data from a file.
-	•	The project-lib functions can't be used to access connected folder assets (files on a path in Cloud Object Storage).
+ - The project-lib functions do not encode or decode data when saving data to or getting data from a file.
+ - The project-lib functions can't be used to access connected folder assets (files on a path in Cloud Object Storage).
 Use the library
 The project-lib library for Python is pre-installed and can be imported directly in a notebook in the notebook editor. To use the project-lib library in your notebook, you need the ID of the project and the project token.
 To insert the project token to your notebook:
@@ -17,25 +17,25 @@ project = Project(sc,"<ProjectId>","<ProjectToken>")
 	3	Go back to your notebook, click the More icon on the notebook toolbar and then click Insert project token.
 The project-lib functions
 The instantiated project object that is created after you have imported the project-lib library exposes a set of functions that are grouped in the following way:
-	•	Fetch project information
-	•	Fetch files
-	•	Save data
-	•	Read data from a connection
-	•	Fetch connected data
+ - Fetch project information
+ - Fetch files
+ - Save data
+ - Read data from a connection
+ - Fetch connected data
 Fetch project information
 You can use the following functions to fetch project-related information programmatically:
-	•	get_name() This function returns the name of the project.
-	•	get_description() This function returns the description of the project.
-	•	get_metadata() This function returns the project metadata.
-	•	get_storage_metadata() This function returns the metadata of the object storage associated with the project.
-	•	get_project_bucket_name() This function returns the project bucket name in the associated object storage. All project files are stored in this bucket.
-	•	get_files() This function returns the list of the files in your project. Each element in the returned list contains the ID and the name of the file. The list of returned files is not sorted by any criterion and can change when you call the function again.
-	•	get_assets() This function returns a list of all project assets. You can pass the optional parameter asset_type to the function get_assets which allows you to filter assets by type. The accepted values for this parameter are data_asset, connection and asset. The value asset returns all of the assets in your project. For example, to get only the data assets, use the function get_assets("data_asset").
-	•	get_connections() This function returns a list of the connections you have in your project. Each element in the returned list contains the ID and the name of the connection.
+ - get_name() This function returns the name of the project.
+ - get_description() This function returns the description of the project.
+ - get_metadata() This function returns the project metadata.
+ - get_storage_metadata() This function returns the metadata of the object storage associated with the project.
+ - get_project_bucket_name() This function returns the project bucket name in the associated object storage. All project files are stored in this bucket.
+ - get_files() This function returns the list of the files in your project. Each element in the returned list contains the ID and the name of the file. The list of returned files is not sorted by any criterion and can change when you call the function again.
+ - get_assets() This function returns a list of all project assets. You can pass the optional parameter asset_type to the function get_assets which allows you to filter assets by type. The accepted values for this parameter are data_asset, connection and asset. The value asset returns all of the assets in your project. For example, to get only the data assets, use the function get_assets("data_asset").
+ - get_connections() This function returns a list of the connections you have in your project. Each element in the returned list contains the ID and the name of the connection.
 Fetch files
 You can use the following functions to fetch files stored in the object storage associated with your project.
 You can fetch files in two ways:
-	•	get_file_url(file_name) where file_name is the name of the file you want to fetch. This function returns the URL to fetch a file from the object storage using Spark. The URL is constructed based on the type of object storage associated with the project. Hadoop configurations are set up automatically when you interact with the object storage of your project. The following example shows you how to use this function to fetch data from the object storage using Spark:
+ - get_file_url(file_name) where file_name is the name of the file you want to fetch. This function returns the URL to fetch a file from the object storage using Spark. The URL is constructed based on the type of object storage associated with the project. Hadoop configurations are set up automatically when you interact with the object storage of your project. The following example shows you how to use this function to fetch data from the object storage using Spark:
 # Import the lib
 from project_lib import Project
 project = Project(sc,"<ProjectId>", "<ProjectToken>")
@@ -69,10 +69,10 @@ Save data
 You can use the following function to save data to the object storage associated with your project. The data will be added as a file to the project bucket in the associated Cloud Object Storage. This function does multiple things. Firstly, it puts the data into the object storage and then it adds this data as a data asset to your project so you can see the data that you saved as a file in the data assets list in your project.
 save_data(file_name, data, set_project_asset=True, overwrite=False)
 The function takes the following parameters:
-	•	file_name: the name of the created file.
-	•	data: the data to upload. This can be any object of type file-like-object, for example, byte buffers or string buffers.
-	•	set_project_asset[optional]: adds the file to the project as a data asset after the data was successfully uploaded to the object storage. It takes a boolean value and the value true is set by default.
-	•	overwrite[optional]: overwrites the file if the file already exists in the object storage or the project. By default it is set to false.
+ - file_name: the name of the created file.
+ - data: the data to upload. This can be any object of type file-like-object, for example, byte buffers or string buffers.
+ - set_project_asset[optional]: adds the file to the project as a data asset after the data was successfully uploaded to the object storage. It takes a boolean value and the value true is set by default.
+ - overwrite[optional]: overwrites the file if the file already exists in the object storage or the project. By default it is set to false.
 Here is an example, which shows you how you can save data to a file in the object storage:
 # Import the lib
 from project_lib import Project
