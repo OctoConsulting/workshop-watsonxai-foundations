@@ -22,7 +22,7 @@ Completing these technical hands-on labs will take roughly 16 hours plus another
 | 30 mins  | Lab 4: [Accessing watsonx.ai via REST API](./self-guided-labs/level-1/lab-04-genai-rest-api) | 
 | 60 mins  | Lab 5: [Lang Chain and IBM's GenAI Library](./self-guided-labs/level-1/lab-05-genai-and-langchain) | 
 | 60 mins  | Lab 6: [Retrieval Augmented Generation (RAG) for Contextual Search](./self-guided-labs/level-1/lab-06-retrieval-agumented-generation) |
-| 30 mins  | Lab 7: [Watsonx.ai Demo in Streamlit](./self-guided-labs/level-1/lab-07-watsonxai-demo-with-streamlit) | 
+| 30 mins  | Lab 7: [watsonx.ai Demo in Streamlit](./self-guided-labs/level-1/lab-07-watsonxai-demo-with-streamlit) | 
 
 ### IBM Products Integrated With Watsonx.ai
 | **Time**        | **Topic** |
