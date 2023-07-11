@@ -1,0 +1,292 @@
+Source: Segment database
+
+Search term: profile
+Clicked: https://cloud.ibm.com/account/company-profile
+
+Search term: user managem
+Clicked: https://dataplatform.cloud.ibm.com/catalog/manage/reports
+
+Search term: data virtualization
+Clicked: https://dataplatform.cloud.ibm.com/data/catalog
+
+Search term: spss
+Clicked: https://dataplatform.cloud.ibm.com/data/services
+
+Search term: expression builder 
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/dstage/com.ibm.swg.im.iis.ds.parjob.dev.doc/topics/c_deeref_Transformer_Stage.html
+
+Search term: CP4D home path
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/dstage/dsnav/topics/datastage.html
+
+Search term: CP4D home path
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/dstage/dsnav/topics/datastage-environments.html
+
+Search term: "personal credentials"
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/dvaas/ts-add-teradata-with-secret-credentials.html
+
+Search term: had
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/svc-welcome/cloud-services.html
+
+Search term: notebooks
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/svc-welcome/wsl.html
+
+Search term: Deep Learning
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/svc-welcome/wsl.html
+
+Search term: conditional format
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/svc-welcome/wsl.html
+
+Search term:  anonymize data
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsd/nodes/anonymize.html
+
+Search term: filter
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsd/nodes/clem_reference/expressions_and_conditions.html
+
+Search term: rstudio
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsd/nodes/extension_r.html
+
+Search term: spss twostep
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsd/nodes/twostep.html
+
+Search term: rstudio
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsd/spss-modeler.html
+
+Search term: pipeline
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/admin/administer-accounts.html
+
+Search term: user managem
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/admin/monitor-resources.html
+
+Search term: user managem
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/admin/monitor-resources.html
+
+Search term: git integration
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/admin/personal-settings.html
+
+Search term: Deep Learning
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/admin/personal-settings.html
+
+Search term: the test was not successful
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/admin/your-roles.html
+
+Search term: dashboard
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/analytics-dashboard.html
+
+Search term: conditional format
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/analytics-dashboard.html
+
+Search term: conditional format
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/analytics-dashboard.html
+
+Search term: cognos
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/analytics-dashboard.html
+
+Search term: cognos
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/analytics-dashboard.html
+
+Search term: MicrosoftSQLServer%E6%8E%A5%E7%B6%9A 
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai_example_binary_classifier.html
+
+Search term: MicrosoftSQLServer%E6%8E%A5%E7%B6%9A 
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai_example_binary_classifier.html
+
+Search term: MicrosoftSQLServer%E6%8E%A5%E7%B6%9A 
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai-build.html
+
+Search term: LGBM
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai-details.html
+
+Search term: pipelines
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai-join-data-tutorial.html
+
+Search term: pipeline
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai-notebook.html
+
+Search term: pipeline
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai-overview.html
+
+Search term: access files in IBM Cloud Object Storage
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai-view-results.html
+
+Search term: pipeline
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/autoai-view-results.html
+
+Search term: community
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/change-environment.html
+
+Search term: Community cards
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/code-run-notebooks.html
+
+Search term: environments
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/create-customize-env-definition.html
+
+Search term: rstudio
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/create-customize-env-definition.html
+
+Search term: rstudio
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/create-customize-env-definition.html
+
+Search term: git
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/create-gist.html
+
+Search term: notebooks
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/creating-notebooks.html
+
+Search term: Deep Learning
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/creating-notebooks.html
+
+Search term: public project
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/creating-notebooks.html
+
+Search term: ERROR_RESOURCES_UNAVAILABLE 
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/creating-notebooks.html
+
+Search term: environment hardware configuration
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/customize-envs.html
+
+Search term: Deep Learning
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/customize-envs.html
+
+Search term: environment
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/customize-envs.html
+
+Search term: PMML
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/data-science.html
+
+Search term: OpenScale
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/data-science.html
+
+Search term: Toolkit
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/data-science.html
+
+Search term: client
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/deploy-python.html
+
+Search term: environments
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/environments-parent.html
+
+Search term: notebook
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/environments-parent.html
+
+Search term: notebook
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/environments-parent.html
+
+Search term: community
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/environments-parent.html
+
+Search term: community
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/environments-parent.html
+
+Search term: community
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/environments-parent.html
+
+Search term: environment hardware configuration
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/environments-parent.html
+
+Search term: environment
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/environments-parent.html
+
+Search term: pipeline
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/environments-parent.html
+
+Search term: Deep Learning
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/jupyter-spark.html
+
+Search term: computing service
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/jupyter-spark.html
+
+Search term: ERROR_RESOURCES_UNAVAILABLE 
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/jupyter-spark.html
+
+Search term: Deep Learning
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/libraries.html
+
+Search term: Community cards
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/libraries.html
+
+Search term: ERROR_RESOURCES_UNAVAILABLE 
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/load-and-access-data.html
+
+Search term: data scientist
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml_dlaas.html
+
+Search term: spss twostep
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml_dlaas.html
+
+Search term: authentication
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-authentication.html
+
+Search term: SparkML
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-canvas-sparkml.html
+
+Search term: pipeline
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-manage-models.html
+
+Search term: Machine learning
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-notebook_local.html
+
+Search term: pipeline
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-orchestration-create.html
+
+Search term: pipeline in 
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-orchestration-sample.html
+
+Search term: pipeline in 
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-orchestration-sample.html
+
+Search term: pipeline
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-roadmap.html
+
+Search term: Machine learning
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-samples-API.html
+
+Search term: pipelines
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/modelops-overview.html
+
+Search term: community
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/notebook-environments.html
+
+Search term: hardware configuration
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/notebook-environments.html
+
+Search term: notebook in ibm watson studio
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/notebooks-parent.html
+
+Search term: notebooks
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/notebooks-parent.html
+
+Search term: notebook
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/notebooks-parent.html
+
+Search term: the test was not successful
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/notebooks-parent.html
+
+Search term: Deep Learning
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/parts-of-a-notebook.html
+
+Search term: scikit-learn
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/pm_service_supported_frameworks.html
+
+Search term: wslib
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/project-lib-python.html
+
+Search term: R
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/rstudio-overview.html
+
+Search term: rstudio
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/rstudio-overview.html
+
+Search term: rstudio
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/rstudio-overview.html
+
+Search term: git integration
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/rstudio-overview.html
+
+Search term: Deep Learning
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/rstudio-overview.html
+
+Search term: rstudio
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/rstudio-overview.html
+
+Search term: spark
+Clicked: https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/spark-envs.html

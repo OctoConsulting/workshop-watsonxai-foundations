@@ -1,0 +1,212 @@
+Source: (IBM Docs metrics hub) https://kc-hub.kc-service.us-south.containers.appdomain.cloud/#/rateContent
+
+Plugin:
+Topic:
+Helpful: No
+Message: you didn't show how I can get a file from a remote server using FTP connection
+
+Plugin: cpd/access
+Topic: t_fulfill_data_req.html
+Helpful: No
+Message: What is going on 'Delivery' and user's 'Accept'?
+
+Plugin: cpd/get-started
+Topic: get-started.html
+Helpful: No
+Message: i need a script
+
+Plugin: cpd/install
+Topic: cpd-operator-connected.html
+Helpful: No
+Message: These pages don't render properly on Chrome Version 88.0.4324.192 (Official Build) (x86_64)
+
+Plugin: cpd/install
+Topic: node-settings.html
+Helpful: No
+Message: Instructions at step 2 (and subsequent step referring to crio config) are not entirely accurate. For my cluster, I was able to find my CRIO config here: /etc/crio/crio.conf.d/00-default
+
+Plugin: cpd/overview
+Topic: overview.html
+Helpful: Yes
+Message: This grave me an overview on Could Pack for data
+
+Plugin: cpd/svc-dv
+Topic: ts-instance-status.html
+Helpful: No
+Message: We're sorry! Content not found
+
+Plugin: cpd/troubleshoot
+Topic: analysis-cannot-be-performed.html
+Helpful: No
+Message: It doesn't worked. I tried to execute the service update and this error was outputted: [CDIMR1402E] Administrator override does not allow the deletion of import area with RID . See the server log(SystemOut.log or messages.log) for details.
+
+Plugin: svc-assistant
+Topic: assistant-svc-install-adm.html
+Helpful: No
+Message: I think you have the default install procedure here including the apply when you have more detailed install steps on the next page
+
+Plugin: svc-discovery
+Topic: discovery-admin.html
+Helpful: No
+Message: says nothing about administering Watson Discovery, nor does it give a link to any Discovery documentation
+
+Plugin: svc-speech
+Topic: speech-to-text-admin.html
+Helpful: No
+Message: way to complicated
+
+Plugin: svc-speech
+Topic: stt-svc-install.html
+Helpful: No
+Message: make installation straightforward. why do you have to be so complicated?
+
+Plugin: svc-speech
+Topic: stt-svc-install.html
+Helpful: No
+Message: Way too complicated. I just want to download software.
+
+Plugin: svc-speech
+Topic: stt-svc-override.html
+Helpful: No
+Message: This page should include how the "minio" and "user-provided-postgressql" secrets are created. Something like 
+
+Plugin: svc-text
+Topic: text-to-speech-install-overview.html
+Helpful: No
+Message: too much words to read
+
+Plugin: svc-welcome
+Topic: pa.html
+Helpful: No
+Message: the install link doesnt work
+
+Plugin: svc-wkc
+Topic: quality_hive_config.html
+Helpful: No
+Message: Not Enough details to perform new connection with the platform
+
+Plugin: svc-wkc
+Topic: quality_hive_config.html
+Helpful: No
+Message: Which Connector should we use? The Apache Hive connector does not include an option to customize the JDBC connection string
+
+Plugin: wsj/admin
+Topic: term-assignment-parms.html
+Helpful: Yes
+Message: Useful info on how auto term assignment can be configured as well as explains the different techniques used for auto term assignment
+
+Plugin: wsj/getting-started
+Topic: profile.html
+Helpful: No
+Message: i want a description of each statistic from a profile and can't find this in the doc.
+
+Plugin: wsj/governance
+Topic: governance_rules.html
+Helpful: No
+Message: it's not clear what the purpose of the rule is
+
+Plugin:
+Topic:
+Helpful: No
+Message: URL non-existent
+
+Plugin:
+Topic:
+Helpful: No
+Message: 1. Whatever technical documentation is "trending" is irrelevant. This isn't Twitter.or Instagram . Of primary interest is having complete and accurate content presented front and center in logical order. 2. Architectural diagrams would be very helpful.
+
+Plugin:
+Topic:
+Helpful: Yes
+Message: I forget my password imail and also my IBM please help me to fix that
+
+Plugin:
+Topic:
+Helpful: No
+Message: Project lib is deprecated, but what to use instead?
+
+Plugin:
+Topic:
+Helpful: No
+Message: What could be the possible problem behind not being able to create an openscale instance?
+
+Plugin: 
+Topic:
+Helpful: No
+Message: It is really mixed up discussion of operators namesspaces multi tenancy and services. Needs more diagrams and splitting up
+
+Plugin: cpd/admin
+Topic: users.html
+Helpful: No
+Message: There is no information on the standard field length and acceptable characters for the username and password fields. More information needs to be available for user management in a non-LDAP configuration. The CP4D itself also does not have any on-screen guidance for this and generates generic errors that do not identify the issue.
+
+Plugin: cpd/install
+Topic: db2wh-nodetuningop.html
+Helpful: No
+Message: It is not clear in case you have to launch the script or the YAML for data virtualization, which parameters you have to change, if any.
+
+Plugin: cpd/install
+Topic: install-overview.html
+Helpful: No
+Message: totally lost too complicated
+
+Plugin: cpd/install
+Topic: portworx-setup.html
+Helpful: No
+Message: Provide content!
+
+Plugin: cpd/overview
+Topic: overview.html
+Helpful: No
+Message: Not clearly explained purpose of the service, a lot of buzzwords were used which tries to trick the reader ant not really to explain what the service is really about. As a software engineer I am very disappointed from this mediocre work
+
+Plugin: cpd/overview
+Topic: overview.html
+Helpful: Yes
+Message: Very good structured and understandible.
+
+Plugin: cpd/upgrade
+Topic: upgrade.html
+Helpful: No
+Message: While the language is clear, it is still easy to miss the requirement to upgrade to Refresh 3 before upgrading to Refresh 4. Perhaps a better way to highlight this requirement would be with a Caution statement like: CAUTION: If you are running an earlier refresh of Cloud Pak for Data Version 4.0, you MUST upgrade to Refresh 3 of Version 4.0 BEFORE you can upgrade to Refresh 4 of Version 4.0.
+
+Plugin: fixlist
+Topic: cde-fixlist.html
+Helpful: No
+Message: Not clear to me what is new in Cognos
+
+Plugin: fixlist
+Topic: wks-fixlist.html
+Helpful: No
+Message: more information
+
+Plugin: svc-assistant
+Topic: assistant-trouble.html
+Helpful: No
+Message: Provide specifics to Watson Assistant. This shows me all 900 pods on CP4D and I get to guess which are used by Watson Assistant.
+
+Plugin: svc-cognos
+Topic: ca-content-store.html
+Helpful: No
+Message: This page is out of order in the "Installing Cognos Analytics" section. It needs to be before "Provisioning the Cognos Analytics Service" as this is a pre-requisite.
+
+Plugin: svc-datastage
+Topic: t_create_etl_job.html
+Helpful: No
+Message: There is no where within the documentation that show how to add a new connection using DB2. Specifically, what connection details are needed to be added and from where they can be accessed/retrieved from.
+
+Plugin: svc-db2w
+Topic: db2wh-load.html
+Helpful: No
+Message: no proper explanation on setup or any details areprovided properly to understand and excute
+
+Plugin: svc-dg
+Topic: dg-install-dg.html
+Helpful: No
+Message: The title is "Installing the Db2 Data Gate backend on Z". It really should be "z/OS" instead of "Z" This is important since OCP/CPD4 is available on "Z" hardware. We should more clearly distinguish those tasks which are z/OS related from those that are for OCP/CP4D running on Z.
+
+Plugin: svc-dv
+Topic: ts-instance-fails-to-start.html
+Helpful: No
+Message: broken page
+

@@ -1,0 +1,39 @@
+Source: https://secure.video.ibm.com/channel/24070822/video/132161618
+
+Title: Highlights - Demo Session 14 (2022-09-29)
+Captions:
+[ 00:06 ] AI ContentOps is all about infusing AI into Content Design.
+[ 00:11 ] So, that's what the Squad is all about: we're the Squad, you're the Squad!
+[ 00:21 ] Our goal is to use design to foster empathy in our users and encourage them to support the people of Ukraine.
+[ 00:27 ] We identified pain points that could prevent a user from engaging with charities and learning more about the war.
+[ 00:32 ] Due to the over-saturation of news on social media, audiences are becoming numb to the weight of individual tragedies.
+[ 00:38 ] This detachment can lead to a decrease desire to educate themselves, leading to less empathy.
+[ 00:43 ] Audiences may also feel distanced from crises that aren't affecting them.
+[ 00:47 ] Finally, there may be users who want to help, but don't know what sources to trust.
+[ 00:52 ] To address these pain points, and encourage users like Riley to support the people of Ukraine, our team decided to create a website that provides users with information regarding the country's situation.
+[ 01:02 ] This is a high-fidelity prototype of the website.
+[ 01:05 ] These drawings show the state of buildings before and after the war.
+[ 01:08 ] In the final iteration, users will be able to traverse through the landscape.
+[ 01:12 ] Information regarding the area's significance will be inserted among the visuals, acting as an interactive infographic.
+[ 01:18 ] Below the interactive landscape, we have listed reliable charities as well as their objectives for easy access.
+[ 01:29 ] We wanted to be able to capture this, in our terms, "informal feedback" and be able to track it.
+[ 01:35 ] So, it comes from many different places and it feeds into the Airtable tracker.
+[ 01:40 ] If it is going to become a GitHub issue, then it will be made into one and Airtable will be able to track the progress on that GitHub issue.
+[ 01:50 ] Then, the rest of the acting on the feedback happens in GitHub, like it normally does: with the writers making any changes they need to.
+[ 01:58 ] And then once that's completed, then Airtable again will pick up that the issue has been closed and it can be added to the report of issues taken care of.
+[ 02:07 ] This is our Airtable that we are working with.
+[ 02:10 ] This one is all relevant products that the feedback might be associated with.
+[ 02:14 ] There's the feedback requests table.
+[ 02:18 ] This is where all of the informal feedback would come in and would need to be decided on how to act on it.
+[ 02:27 ] This table picks up all of the GitHub issues that have specific labels in them.
+[ 02:37 ] Microsoft's point with this report is to say: "We're not going back to the way it was before."
+[ 02:42 ] In the past, the assumption was that everybody would be in the same building.
+[ 02:47 ] That's going to be different now.
+[ 02:49 ] So many people have experienced the flexibility of remote work, that's the part that people don't want to give up.
+[ 02:56 ] In their report, Microsoft say some of our leaders are not getting how strong the requirement for flexibility is among the rest of the work force.
+[ 03:04 ] You hear people talking about serendipity.
+[ 03:08 ] A challenge is going to be: how to make that happen, if some of the people are working remotely.
+[ 03:13 ] Companies are saying: "If you could pick from anywhere, then your talent pool is now so much bigger."
+[ 03:21 ] The question isn't: "How do we get everybody back into the lab?"
+[ 03:25 ] The really important question is: "How do we foster creativity, innovation, and collaboration, and that feeling of team connectedness in this new, more flexible work environment?"
+[ 03:37 ] The company that can answer that question will attract and retain the strongest employees, and they'll be more competitive.

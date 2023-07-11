@@ -1,0 +1,41 @@
+Source: https://w3.ibm.com/w3publisher/ai-contentops/blog/2e5d8050-9a7a-11ec-9dea-b5b4174c39d3
+
+What is the AI ContentOps Squad?
+You can learn all about the AI ContentOps Squad in this blog post from last year: The AI ContentOps Squad 
+You can see some examples of work that the AI ContentOps Squad members have done here: AI ContentOps Squad 2021 
+AI ContentOps Squad Leader
+From the beginning, a guiding principle of the Squad has been to give IBMers a chance to work on interesting, fun projects that grow their skills.
+A new aspect of the Squad this year is a leadership component: Squad Leader.
+Being the Squad Leader gives someone career opportunities:
+Develop and demonstrate leadership skills
+Gain visibility up the management chain
+Put your stamp on the Squad by delivering an initiative that will live on after your tenure as Squad Leader
+As with all AI ContentOps Squad projects, the Squad Leader doesn't have to go it alone.  The key to Squad Leaders' success will be meaningful support from management and the AI ContentOps lead.
+Sara Elsharawy
+We are very lucky that Sara Elsharawy is the first AI ContentOps Squad Leader!
+Sara is a Content Designer in Data and AI.  She joined IBM last year, and she has already worked on multiple AI ethics projects at IBM.
+Congratulations, Sara!  Thank you for leading our Squad. 
+Choosing the AI ContentOps Squad Leader
+The usual process
+When it's time to choose a new team lead, managers might consider which high-performing team members could do a good job, based on their merits or their potential, and then offer the role to the candidate that seems best. 
+There can be problems with that process, however.  Obviously, trying to assess someone's potential is fraught with the risk of bias.  But even seemingly merit-based choices can perpetuate unfairness.
+When it comes to considering someone's merits, that usually means looking at past performance.  For example, if one person delivered a high-profile project last year and a second person didn't, it might seem that the first person is the best choice for the new role.  However, subtle biases affect who is offered high-profile, highly visible projects.  Over time, the gap in accomplishments between people offered more opportunities and those who are not is compounded.  This is sometimes called the thin file problem.
+Designing fairness into processes
+Learning about bias and fairness and becoming aware of our own thought processes is hugely important.  But when it comes to achieving concrete change for the better, anti-bias training has its champions and its detractors.  In other words, it might not be possible for decision makers to just not be biased through willpower alone.
+Another approach for dealing with bias in hiring and promotion decisions is to design processes that try to reduce or eliminate the opportunity for bias to affect the choice.  The often-cited example is how orchestras changed the auditioning process so that the people choosing new orchestra members wouldn't be influenced by what the people auditioning look like.
+An excellent book about designing fairness into processes is:
+What Works
+Gender equality by design
+by Iris Bohnet (2016)
+Book | Google talk (video) 
+Book: What Works, by Iris Bohnet (2016)
+How we did it
+Learning from Dr. Bohnet's examples, the AI ContentOps Squad Leader was selected through the following process:
+All Squad members who completed a Squad project last year were eligible to be Squad Leader
+Eligible Squad members were asked if they wanted to be considered for the new role (it's reasonable that someone might not want to be the Squad Leader right now)
+The name of every eligible Squad member who confirmed they wanted to be in the running was written on a piece of paper
+All the papers with names were folder and thrown in a container together
+The name of our first AI ContentOps Squad Leader was drawn during our AI ContentOps Squad Kickoff Party
+The role of Squad Leader is time limited to 3 months.  This makes the role less intimidating for people who are trying out a leadership role for the first time.  And it means more people get a chance.
+AI ContentOps Squad 2022 Kickoff Party!
+To learn more about the AI ContentOps Squad, about the Squad Leader role, and to see a replay of the draw, watch the recording the kickoff party:

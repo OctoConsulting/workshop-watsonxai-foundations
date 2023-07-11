@@ -1,0 +1,71 @@
+Source: https://github.ibm.com/dap/dsx-documentation-source/issues
+
+Title: Remove some getting started tutorials
+Description:
+Rationale: theres a lot of overlap between the getting started and the DF tutorials. but while there's a lot of overlap, the getting started tutorials are simple whereas the df tutorials are not simple at all. ### Covered in DF tutorials in a different way - Refine data - used to be part of the DR doc, and then was moved to getting started. covers a lot more than the DF tutorial - Analyze data in a Jupyter notebook - covers creating a notebook, adding a data asset, and editing a notebook. we don't cover these basic things in the DF tutorials. ### Not covered in DF tutorials - Tell a story with a dashboard - Build and deploy a machine learning model with AutoAI - Build and deploy a machine learning model with SPSS Modeler - Build, run, and deploy a Decision Optimization model ### Covered in DF tutorials, but getting started tutorials have lots of views - Build and deploy a machine learning model in a Jupyter notebook - this uses a sample notebook, and is pretty clear cut (as opposed to the AI governance tutorials which also include model inventory and WOS) - Transform data - this is more popular than I would have thought. it's a pretty basic DataStage flow, but the Integrate data DF tutorial is also very easy to follow. ### Page views from May 1, 2022 to Feb 24, 2023 ! ## Actions ### Remove these tutorials - [ ] Curate data - [ ] Protect data - this is also in the CPD on-prem docs - [ ] Virtualize data ### Redirect to these tutorials | Getting started tutorial | Df tutorial | | ---- |---- | | Curate data ( | Curate high quality data ( | | Protect data ( | Protect your data ( | | Virtualize data ( | Virtualize external data ( | ### Consolidate these tutorials | Getting started tutorial | Doc tutorial | | ---- |---- | | Build and deploy a machine learning model with AutoAI ( | AutoAI tutorial ( | ### Writers affected by these changes | Writer | Service/Tool | | ---- |---- | | Julie Forgo | AutoAI | | Michelle Betbadal | Metadata import (Curate) | | Iris Glck | Mask data (Protect) | | Trish Smith | Watson Query |
+
+
+Title: Update documentation for "restricted credentials" feature. (CPD)
+Description:
+"restricted credentials" feature = Prevent users from retrieving decrypted credentials. Turns out this feature does NOT require Flight. Friday, February 24, thread in Common connectivity: Services can support restricted credentials by one of two ways: 1. Independent of Flight = Data Refinery 2. The service supports Flight. (Right now only Notebooks) <-- as of 4.6.1 Maybe put the supported services in a separate topic? Check what's in the UI text. Data Refinery can support restricted credentials without Flight. Other services too in future? Putting label as 4.7, but probably should address this sooner. This issue is for CPD only. Support in CPDaaS will differ. ----------------------------------------------------------------------------- Related: CD issues: -- -- -- Previous Development and UX issues: -- wdp-gov/tracker#89216 -- dap/dap-planning#26805 (comment) <-- Has design. -- dap/dap-planning#25857 -- dap/dap-planning#25216 -- dap/dap-planning#24586
+
+
+Title: Project: Demand Response Prediction
+Description:
+Due date: *Add date and select the appropriate Milestone* ## Checklist - [x] Received legal checklist - [x] Received management approval - [ ] Sent to legal - [ ] Received legal approval - [ ] Removed credentials - [ ] Copyright includes year created - [ ] Data set information added to - [ ] Add / remove link from documentation - [ ] Added to COO Sample Project - [x] Add machine learning as a required service - [x] Add this link for Terms: - [x] Tags in Gallery: aws-sagemaker, machine-learning `check with requested for any other tags` - [x] Add this trailing text in the description: Click **Create project** to get started or . Don't have an account yet? for a free account. ## Legal & other information Related to: `For industry accelerators, add link to the existing accelerator page, for example Image for Gallery: `add zip of image being added to the Gallery description` Project (zip): Legal checklist: Data Form: Legal approval: Manager approval: COO github issue: ## Description *Additional description for the notebook?* ## Published link *Remove all inapplicable* Date published: Cloud: CP4D:
+
+
+Title: [WML][CP4D][Cloud] Update the topics that refer to cpdctl to make them more useful.
+Description:
+Update the deployment-related topics that refer to `cpdctl` to make them more useful. Check with the dev team for details. Example of a topic that needs to be updated:
+
+
+Title: [WKC] Catalogs: test all procedures and videos
+Description:
+There have been a number of changes in catalogs recently that are not reflected in the docs. For example, to download an asset, you now have to go to the **Asset** page of a data asset and click the download icon. Also, business terms and data classes that are assigned to columns are trickier to add or edit and we should document that. Look at each topic under Catalog assets and update versus the UI. Check the videos and if they need to be updated, open Video issues for Sharyn.
+
+
+Title: Improve AppID integration documentation with screenshots and/or verification steps
+Description:
+Customer support ticket exposed some issues with the Beta APPid support in CPDaaS. Maybe a short video and/or screenshot showing which service provider fields are import to CP4DaaS. e.g. pick a well known provider as an example so that at least customers can google/research based on that known provider.
+
+
+Title: [CPDaaS] Improve docs for scheduling jobs regarding how API key works
+Description:
+Customer is requesting documention about how the API keys work for scheduling jobs. See: Summary is: The customer did more testing and the problem occurs because another user initially created the schedule. Weve been playing with the scheduled jobs and it seems that when user1 creates a new job, or edits an existing job (which is currently failing) then these scheduled jobs are starting and running correctly. However, if user2 then tries to edit these jobs again then the jobs do not run. Therefore, it seems that only jobs created and/or edited by user1 will successfully start and run. The testing we have undertaken today and the outcomes are: TEST 1 user1 edits a failing job to modify the job and saves scheduled job > JOB STARTS & RUNS SUCCESSFULLY user2 then edits this job to modify the job and saves scheduled job > JOB DOES NOT START TEST 2 user1 creates a new job and sets the schedule details and saves scheduled job > JOB STARTS & RUNS SUCCESSFULLY user2 then edits this job to modify the job and saves scheduled job > JOB DOES NOT START **I cannot locate in the documentation where schedules are mentioned with respect to the generated API key. Note: Both users can schedule jobs albeit only user1's schedule will run due to him owning the API key. Given the API key is system generated, is there documentation which describes what to do? TIA.**
+
+
+Title: Video: Business analytics use case
+Description:
+## Is this a new request or an update? - [x] New - [ ] Update If this is an update, provide a link to the doc topic where the video is embedded: ## Due date November 30 - CPD 4.6 release ## Release - [ ] Closed beta - [ ] Open beta - [x] General availability ## Platform - [ ] Cloud Pak for Data as a Service - [x] Cloud Pak for Data on prem 4.6 - [ ] Both ## Product ## Resources available - [ ] Existing video to be edited - [ ] Existing WebEx recording - [ ] Existing screen recording with no audio - [ ] Platform to capture video clips ## Video request description (include any special set up that might be required to capture recordings) Video for the Business Analytics use case, similar to the videos that were done for the Data Fabric use cases. The draft topic is available on the review server (still to be reviewed by SMEs and edited).
+
+
+Title: Video: Customer care use case
+Description:
+## Is this a new request or an update? - [x] New - [ ] Update If this is an update, provide a link to the doc topic where the video is embedded: ## Due date November 30 - CPD 4.6 release ## Release - [ ] Closed beta - [ ] Open beta - [x] General availability ## Platform - [ ] Cloud Pak for Data as a Service - [x] Cloud Pak for Data on prem 4.6 - [ ] Both ## Product ## Resources available - [ ] Existing video to be edited - [ ] Existing WebEx recording - [ ] Existing screen recording with no audio - [ ] Platform to capture video clips ## Video request description (include any special set up that might be required to capture recordings) Video for the Customer Care use case, similar to the videos that were done for the Data Fabric use cases. The topic has been published without a video in the CPD 4.5.3 release. There will be some changes to terminology for 4.6, but the overall process should be close to the same.
+
+
+Title: [WKC]: Improve quality of `edit-asset` topic
+Description:
+### Description Improve the quality of the content in the Editing asset properties in a catalog `(../catalog/edit-asset)` topic to show relevant information pertaining to a task topic. The current topic is hard to read, formatted incorrectly, and hosts information irrelevant to a task topic. ### Resources - - - - - ### Progress - [x] Identify relevant topic information - [x] Identify and remove irrelevant information - [x] Create sections and organize information - [x] Senior writer sign-off - [x] Publish
+
+
+Title: [WKC] Custom relationships between assets and artifacts
+Description:
+Aha: Github: As a Data steward, I can create new relationships between catalog assets and additional governance artifacts, such as policies, governance rules, reference data etc. These can include additional relationships with business terms and classifications that are beyond term or classification assignments.
+
+
+Title: Configure a 360-degree view tutorial should use connected data
+Description:
+Feedback from expert labs Most customers use connected data, so tutorials should too. Update the Customer 360 tutorials to use the Db2 connection instead of CSV files. This is dependent on the Match 360 service supporting connected data.
+
+
+Title: Data fabric trial: Add Jupiter energy project - Rename to 'Build an AI model'
+Description:
+Request: Add **Jupiter Energy** sample project to the Gallery as a `Data fabric` tutorial. Reason: Since the `Learn by example` tile will point to the new data fabric trials, there is no longer an entry point into the **Jupiter Energy** sample project. To do for Dev environment: - [x] Add sample to Dev Gallery - [x] Add `Data fabric` tag - [ ] Find an image to add to the Gallery tile - [x] Rename - check with Inge - [ ] Enable the journey selector for testing Note: Already approved by legal for To do for production: - [ ] Add sample to Prod Gallery - [ ] Add `Data fabric` tag - [ ] Add image to the Gallery tile - [ ] Enable the journey selector for testing
+
+
+Title: Data fabric trial solutions (Epic)
+Description:
+**This issue is the epic for the data fabric tutorials associated docs.** (but not including the use case topics) Initial tasks for DF docs not covered in other issues in this epic: Update docs to mention data fabric solutions when they are implemented in the UI: - Multi-cloud data integration - Data privacy and governance - Customer 360 - Trustworthy AI - [x] Add a new topic for signing up for a data fabric trail - [x] Update the setting up the platform topic to reorganize the tasks in steps 4, 5 as main steps instead of data fabric steps. Also update description of data fabric at top of topic. Update mentions of "core services": - [x] wdp_admin_console.md - [x] stop-apps.md - [x] assets.md - [x] faq.md - [x] upgrade.md - [x] your-roles.md - [x] assign-dc-admin.md WAIT ON THIS ONE: Remove topics that are no longer necessary: - -
+

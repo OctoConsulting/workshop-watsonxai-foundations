@@ -1,0 +1,95 @@
+Source: (Support search) https://ui-prod.vcwhr7l4qbc.us-south.codeengine.appdomain.cloud
+
+Title: Field Enrichment Not Working in Watson Discovery
+Description:
+"""
+After successfully creating a collection, the following enrichment has been picked on field "text": 
+- Part of Speech
+- Sentiment of Document
+- Keywords
+- Entities v2
+There was no error after clicking "Apply changes and reprocess", however the enrichment didn't seem to work since there is no related metadata coming back from the search result. Please see attached screenshots.
+Assuming the enrichment is performed by NLU or something equivalent, is there any configuration needs to be done at the platform level in order for the enrichment to work properly?
+"""
+Resolution:
+"""
+According to Dev in most cases, database columns will be put under metadata field.
+Enrichments cannot be applied to fields that are in nested fields (like metadata.review).
+Since you're applying enrichments to text field, documents that does not have text field won't have output of enrichments so according to Dev this is working as designed.
+Dev has provided the following a workaround:
+1. Use CM instead of DM project type
+2. First create CM project and re-use the same collection in DR project (if you wish to continue using DR)
+BTW: DR is Document Retrieval and CM is Content Miner
+"""
+
+
+Title: Cognos Dashboard displays error on accessing plain database table
+Description:
+"""
+The Cognos Dashboard service (assembly CDE) has recently been added to the existing cluster. It apparently installed without errors, but on attempt to create a dashboard and display data from a simple table (no select or anything yet) it errors out with 'Unable to add data source, internal error trying to profile the file schema.'
+The same table can be accessed without any errors in data refinery. Screenshots from both CDE and refinery will be uploaded to the case, together with the diagnostics job zip file.
+This has been attempted with several tables, no change, the error is persistent.
+Database is the same Exasol database and driver used by all CP4D use cases (notebooks, WML, Spark) here.
+See screenshot of table selection.
+This is a repeatable / persistent phenomenon.
+"""
+Resolution:
+"""
+According to documentation:
+https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=data-supported-sources
+Exasol is only supported for services:
+SPSS Modeler
+Watson Knowledge Catalog
+Watson Studio
+Not for:
+Cognos Dashboards
+DataStage
+Data Virtualization
+"""
+
+
+Title: Supported data for "insert to Pandas" in notebook
+Description:
+"""
+We have 2 data sets in a project coming from connections (one from postgres connection, another from DV connection), but in notebook, option "insert to pandas dataframe" only works for DV data.
+After some investigation I found that some data is not support for "Load data into pandasDataFrame": https://www.ibm.com/docs/en/cloud-paks/cp-data/3.5.0?topic=notebook-support-loading-data-in#file-types
+When adding a "connected data" asset to a notebook, how to know what is the format of the data set?
+"""
+Resolution:
+"""
+Depending on the type of connection, you can distinguish two basic types of connected data 1) relational tables, and 2) files, for example CSV.
+If code insertion is offered depends on 2 factors: 1) type of connection, 2) file type/format 
+In this particular case (DV and PostgreSQL), both connected data assets are of type 'relational table'.
+Code insertion is supported only for DV but not for PostgreSQL. That explains what the customer is observing.
+Best way to inspect connected data assets with notebooks is to insert the credentials.
+Run the cell and display the credentials.
+The datapath field is a pointer to the data within the connection. For relational tables, like in this example, it contains schema/table.
+For files, it contains a pointer to the file path. The file extension usually reveals the file type/format.
+"""
+
+
+Title: Can I rename an existing Catalog?
+Description:
+"""
+In the UI, there are only Delete and View options.
+Is it possible to rename an existing catalog?
+And will there be any impacts to existing Data Assets?
+"""
+Resolution:
+"""
+there is a way to rename the existing catalog by using API
+https://cloud.ibm.com/apidocs/watson-data-api-cpd#patchcatalogv2
+1.Get a token, replace the URL to yours:
+curl -k -X POST https://<url>/icp4d-api/v1/authorize -H 'cache-control: no-cache' -H 'content-type: application/json' -d '{"username":"admin","password":"password"}'
+2.Open browser (do remember to login your CPD console firstly), replace your CPD console <url> below:
+https://<url>/v2/cams/explorer/#!/Catalogs/patchCatalogV2
+3.Input the following parameters:
+token: you get from step 1;
+catalog_id: you can get it from the browser's URL when you open the catalog, such as below URL I get when I open my catalog
+https://<url>
+Then the catalog_id should be <id>
+Input the body,replace the "test" to the name that you want to change:
+[ { "op": "replace", "path": "/entity/name", "value": "test" } ]
+Click on Try it out.
+"""
+

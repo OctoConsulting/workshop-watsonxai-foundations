@@ -1,0 +1,97 @@
+Source: https://ibm-analytics.slack.com/archives/C2A54NM1Q
+
+Message:
+Reactions: onitt, done-yes-completed
+Text: Hi - can we please get a new broken link report run for 4.6.x since we published yesterday? Thanks!
+
+Message:
+Reactions:
+Text: Hi I cannot open the CPDaaS docs site: Anyone else experiencing this issue?
+
+Message:
+Reactions:
+Text: All GA docs are loading slowly. CPDaaS and CPD. System-wide slowdown?
+
+Message:
+Reactions:
+Text: Hello! I have an advice/best practices question for WFM builds to IBM Docs with mostly MD files. I am working on a relatively new product (Unreal Data), previously only delivered as PDF. Most of the source files are in MD, though potentially not all in the future (I don't know yet). Currently, I have a test WFM instance working without problems to create an IBM Docs test URL, using a DITAMAP as the "toc" file. I have seen questions about using a summary.MD file (listed as summary.html in the WFM Docs Manager page for the "toc") for builds with MD files. Does anyone have any advice/best practices/etc. about using a DITAMAP as the "toc" files versus using a summary.MD file as the "toc" file for an IBM Docs instance that is mostly MD files (but may not always be just MD files)? Thanks in advance for any thoughts!!
+
+Message:
+Reactions: cry
+Text: I seem to have build errors SSQNUZ_4.6_test (SSQNUZ_4.6_test) *build results:* [Build]: Err 4, Wrn 0, Inf 0 ** &lt;&lt; _do_ I can see the same build errors but dont know why repository not found
+
+Message:
+Reactions:
+Text: Does anybody know fix this? Refreshing has always fixed it before but not this time for some reason :bella-nope:
+
+Message:
+Reactions:
+Text: I'm publishing a new tutorial in the CPD4.6.3 docs for next week's release. It references which is in the git repo and referenced in this as a "resource only", but the link from the tutorial is broken here: can someone help troubleshoot?
+
+Message:
+Reactions:
+Text: Oops - first I heard about this! 'Do not update to macOS Ventura if you rely on Inkscape! There is an unresolved issue that currently affects all GTK3 based apps on macOS Ventura, making the app unresponsive to certain mouse events.'
+
+Message:
+Reactions:
+Text: How is everyone doing with configuring their HSK with Github? See this thread in the channel regarding "I think there some issues running from the VS code integration as it asks for a PIN and it's non-interactive and doesn't get it. There's an entry in the FAQ for using ssh-agent, which will allow you to stash the key securely in memory for a while (but the key file is still nowhere on your disk)" :
+
+Message:
+Reactions:
+Text: Looks like it's happening again... My commits today to 'svc-db2' and 'svc-db2w' in CPD *4.6_test* this time were successfully updated in GHE, but WFM was not detecting them. The new content eventually got built by what I assume is a scheduled "build all services" run in WFM, but not by my check-ins since 09:58 EST today. :disappointed:
+
+Message:
+Reactions: looking, white_check_mark
+Text: Hi, I'm getting this error when I create a local cloud build using VSCode: TypeError: Cannot read properties of undefined (reading 'hasOwnProperty') at C:\GitHub\cpd-mddoc-src\node_modules\cpd-mddoc-metalsmith\bin\mallcop.js:158:42 at Array.forEach (&lt;anonymous&gt;) at dir.readFiles.rc (C:\GitHub\cpd-mddoc-src\node_modules\cpd-mddoc-metalsmith\bin\mallcop.js:156:19) at C:\GitHub\cpd-mddoc-src\node_modules\node-dir\lib\readfiles.js:110:34 at FSReqCallback.readFileAfterClose [as oncomplete] (node:internal/fs/read_file_context:68:3) Running 'npm update' doesn't help. Can someone help with this error please?
+
+Message:
+Reactions:
+Text: Following up on a couple broken link report issues so I can give the status our team meeting on Monday: How's it going with determining why reports on the same content on different servers don't match? It's troubling that we clear out all our broken links on the Test server before publishing, but when the report is run on the published content, broken links are found. Is there any ETA on when we'll be able to run a report at will? I remember there was some discussion about adding a build button to the report GUI.
+
+Message:
+Reactions:
+Text: Can someone remind me: In which GitHub repo do people open issues to have CPDaaS docs corrected/updated?
+
+Message:
+Reactions: thankyoubold
+Text: :maintenance2: If you havent yet seen the banner on GitHub Enterprise web pages &gt; *GitHub Enterprise* will be down for host maintenance tomorrow, Sat, Feb 11, for 3 hours, from 09:00 ET (14:00 UTC) to 12:00 ET (17:00 UTC). More info here:
+
+Message:
+Reactions:
+Text: Also the dita build does not look happy.
+
+Message:
+Reactions:
+Text: Please help: wsj build:
+
+Message:
+Reactions:
+Text: I have some updates to screen images that are showing up on Moon here (beta logo in the Edit and Remove sections) but not on the test server here:
+
+Message:
+Reactions:
+Text: 'svc-db2w' for CPD 4.5 has not been building on check-in since 1 error and 2 warnings at 13:15 EST and numerous check-ins made since that time. \_(",)_/
+
+Message:
+Reactions: looking
+Text: Please try to get Garbo working. I am getting connection refused error from . I am trying to publish and need to check content on garbo.
+
+Message:
+Reactions: pw_+1
+Text: VPN is connected.
+
+Message:
+Reactions:
+Text: I am getting connection refused error from . I am trying to publish and need to check content on garbo.
+
+Message:
+Reactions: wow
+Text: IBM Universal Link Checker Design document:
+
+Message:
+Reactions:
+Text: Can someone help me troubleshoot this?
+
+Message:
+Reactions:
+Text: Hi Team! I've been using Git for the past two months. Even though I've already entered the SSH token, Git frequently prevents me from being able to pull origin from an existing repository or clone a new repository. The following error is thrown.

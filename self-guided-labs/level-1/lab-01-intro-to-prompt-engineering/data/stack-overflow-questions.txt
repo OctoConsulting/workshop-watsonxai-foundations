@@ -1,0 +1,57 @@
+Source: https://api.stackexchange.com/2.3/search/advanced?fromdate=1640995200&order=desc&sort=activity&tagged=watson-studio&site=stackoverflow
+
+
+Title: Cannot update my github personal access token to watson studio
+Body:
+"""
+I try to update my personal acces token beacuse the old one is expired, but watson studio won't let me, forcing me to use the old token I generate a new token but the option of changing its not possible
+"""
+
+Title: How to change Jupyter notebook s name not the project s name) within Watson Studio project?
+Body:
+"""
+The i) icon on the top right corner of the notebook only allows me to change the project's name not the notebook's name.
+"""
+
+Title: AutoAI is not appearing in IBM Watson Studio?
+Body:
+"""
+I m trying to make a new asset in IBM Watson Studio, but I cannot find AutoAI? Does anyone know what is the problem? Note: I have just created my account and started learning about IBM Cloud.
+"""
+
+Title: stackoverflow error on spark environment on Watson Studio IBM Cloud
+Body:
+"""
+I am following spark tutorial from Watson Studio Gallery on IBM Cloud and run into Java stack overflow problem: Py4JJavaError: An error occurred while calling o20418.fit. : org.apache.spark.SparkException: Job aborted due to stage failure: Task serialization failed: java.lang.StackOverflowError java.lang.StackOverflowError at scala.collection.immutable.List$SerializationProxy.writeObject(List.scala:516) at sun.reflect.GeneratedMethodAccessor22.invoke(Unknown Source) at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) at java.lang.reflect.Method.invoke(Method.java:498) at java.io.ObjectStreamClass.invokeWriteObject(ObjectStreamClass.java:1154) at java.io.ObjectOutputStream.writeSerialData(ObjectOutputStream.java:1496) at java.io.ObjectOutputStream.writeOrdinaryObject(ObjectOutputStream.java:1432) The problem line : cvModel = crossval.fit(trainingRatings) The problem cell: from pyspark.ml.tuning import CrossValidator, ParamGridBuilder (trainingRatin
+"""
+
+Title: I am unable to publishing a notebooks from Watson Studio to Github
+Body:
+"""
+I am unable to publish my notebooks to GitHub I have generated a private token and saved it to my IBM Watson studio. I have also created the master branch on Github but I cannot find the settings tab on my IBM projects window; please see attached screengrabs. my Watson studio screen Coursera lab screen
+"""
+
+Title: How can I get the keyboard input in IBM Watson studio?
+Body:
+"""
+Now I am taking IBM Data Science Professional certificate course. And, I am using Jupyter Notebook on 'IBM Watson Studio'. My question is this. when I want to receive the keyboard input on Jupyter notebook, There is a problem like this. I can't write any input to list 'a'. I want to put some string to 'a' like a=['h','e','l','l','o'] . But, I can't write any input to list 'a'. So, list 'a' remains empty. How can I solve this problem?
+"""
+
+Title: IBM Watson Studio Notebook not rendering PyVis - Error 404 Not Found openresty
+Body:
+"""
+I m using IBM Watson Studio as a cloud service, jupyter notebook, Python 3.9, and trying to render a network diagram using the PyVis library. The code works / no errors, but the graph / html will not render, and returns 'Error: 404 Not Found' and 'openresty' I am using the 'notebook=True' option which should render it in the notebook. Any help on how to render the graph / image / html within Watson Studio Notebook environment (server based)? The following code executes (taken from the PyVis tutorial), but does not render the graph / image in a Watson Studio Notebook. from pyvis.network import Network import pandas as pd got_net = Network(height='750px', width='100%', bgcolor='#222222', font_color='white', notebook=True) # set the physics layout of the network got_net.barnes_hut() got_data = pd.read_csv(' sources = got_data['Source'] targets = got_data['Target'] weights = got_data['Weight'] edge_data = zip(sources, targets, weights) for e in edge_data: src = e[0] dst = e[1] w = e[2] g
+"""
+
+Title: Jupyter Notebook Sharing with IBM Cloud Pak
+Body:
+"""
+I am trying to link a Jupyter Notebook from IBM Cloud Pak. The issue is that this is registered (for my account) as a fully public, fully shared notebook for anyone with a link The notebook opens to a single cell with In [ ]: and no content. Is this a common issue?
+"""
+
+Title: AttributeError object has no attribute while using the function history to extract stock information
+Body:
+"""
+I m trying to extract information of the Tesla stock but, I always get the error while coding it. Here's the code so far: import plotly.graph_objects as go import yfinance as yf import pandas as pd import requests from bs4 import BeautifulSoup from plotly.subplots import make_subplots def make_graph(stock_data, revenue_data, stock): fig = make_subplots(rows=2, cols=1, shared_xaxes=True, subplot_titles=( Historical Share Price , Historical Revenue ), vertical_spacing = .3) stock_data_specific = stock_data[stock_data.Date = '2021--06-14'] revenue_data_specific = revenue_data[revenue_data.Date = '2021-04-30'] fig.add_trace(go.Scatter(x=pd.to_datetime(stock_data_specific.Date, infer_datetime_format=True), y=stock_data_specific.Close.astype( ), name= Share Price ), row=1, col=1) fig.add_trace(go.Scatter(x=pd.to_datetime(revenue_data_specific.Date, infer_datetime_format=True), y=revenue_data_specific.Revenue.astype( ), name= ), row=2, col=1) fig.update_xaxes(title_text= , row=1, col=1) fig
+"""
+
