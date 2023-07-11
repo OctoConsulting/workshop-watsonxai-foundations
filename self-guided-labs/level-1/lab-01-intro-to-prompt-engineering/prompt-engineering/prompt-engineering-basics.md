@@ -3,13 +3,25 @@
 ### 1.0 Balancing intelligence and security
 With great artificial intelligence comes security risks. Solutions like chatGPT are more than Large languge Models (LLMs).  ChatGPT's underlying LLMs have been fine-tuned by the OpenAI teams using an additional Chat dataset plus a RLHF (Reinforcement Learning Human Feedback) dataset so it's much more than a standard LLM, it's a chatbot-enabled LLM.  An LLM with 175 billion parameters. 
 
-In Watsonx.ai, we are interacting directly with smaller LLMs (3-20 billion parameters).  This is a wise choice from a security POV.  Just imagine your a hacker.  Which model would you choose to target for prompt injection? OpenAI's ChatGPT with 175 billion parameters or the smaller and more-focused Prompt-Tuned 3 billion parameter models that you'll eventually be building?  Which has a larger attack surface for prompt re-engineering?
+In Watsonx.ai, we are interacting directly with smaller LLMs (3-20 billion parameters).  This is a wise choice from a security POV. Prompt injection is a major risk for enterprise uses of LLMs. In prompt injections, a hacker will create an intricate prompt in order to cause a LLM such as chatGPT to ignore/bypass security protocols and reveal sensitive company information. Just imagine you're a hacker.  Which model would you choose to target for prompt injection? OpenAI's ChatGPT with 175 billion parameters or the smaller and more-focused Prompt-Tuned 3 billion parameter models that you'll eventually be building?  Which has a larger attack surface for prompt re-engineering?
 
-That's right.  For security, smaller is better.  However we're getting ahead of ourselves.  Let's first interact with a few of Watsonx.ai's LLMs to better understand and learn how to make them respond the way we need.
+As you can imagine, using relatively smaller models such as those utilized in watsonx.ai creates a much bigger challenge for a potential hacker. Using many small models rather than a single large one such as chatGPT creates a wide distribution of sensitive data. In addition, each small language model is much harder (if not impossible) to manipulate due the high level of prompt engineering that is needed for them to perform their primary tasks. They don’t have the wide range of functions such as chatGPT (e.g. chatbot capabilities), so the majority of prompt injection attempts will be misunderstood or ignored by the language model agent.
+
+That's right.  For security, smaller is better. On top of security benefits, there computational improvements with using smaller, lighter weight models as well. However we're getting ahead of ourselves.  Let's first interact with a few of Watsonx.ai's LLMs to better understand and learn how to make them respond the way we need.
 
 **Note:** The following images show actual results from Watsonx.ai. The slight gray text is what we provided to the model.  The blue highlighted text is how the model responded.
 
-### 1.1 Everything is text completion
+### 1.1 LLM Foundations
+
+Before we jump into exploring the capabilities of watsonx.ai, we first need to lay a foundation for how each of our LLMs works, and how we can tune the model and parameters to change our output. Gaining this understanding will make us more effective prompt engineers, and we will be able to apply these changes throughout the remaining labs even as we utilize the API in our Python environments!
+
+<img src="../images/0.1.png" width="80%" alt="prompt" />
+
+When you open up your prompt lab, this is the view you will be shown.  Each time you enter a prompt, you will have “input tokens” and “generated tokens”. Tokens are to our model what words are to us — although they can vary. Depending on the circumstance, tokens can be sequences of characters or even words themselves. As you will see when you experiment with the prompt lab, tokens are not necessarily a 1:1 match with words in natural language, but it is an approximation you can use when trying to estimate!
+
+It is important to understand what tokens are so that you know how much information you are feeding the model when you give it a prompt, as well as how much information you expect it to generate for you. There is a max of 4096 tokens in the prompt builder, so keep in mind that the more expressive you are with your prompt instructions, the less room the model will have to respond back to you.
+
+### 1.2 Everything is text completion
 
 Watsonx.ai is not a chatbot interface so just specifying an instruction or question rarely produces a good result. For instance, what if we ask Watsonx.ai to "List ideas to start a dog-walking business"?
 
@@ -17,7 +29,7 @@ Watsonx.ai is not a chatbot interface so just specifying an instruction or quest
 
 <p> </p>
 
-### 1.2 Cue the output structure
+### 1.3 Cue the output structure
 
 We can see from the above example that simple prompts do not work with smaller LLMs.  To receive a structured response, include a cue to start the response in the desired structure.  For example, just adding these two characters, "1.", dramatically improves the response.
 
@@ -25,14 +37,15 @@ We can see from the above example that simple prompts do not work with smaller L
 
 <p> </p>
 
-### 1.3 Provide an example as guidance (or Single Shot Prompting)
+### 1.4 Provide an example as guidance (or Single Shot Prompting)
 
 To receive a higher-quality response, provide an example of the kind of response you want.  In technical terms, this is called Single Shot Prompting. 
 
 <img src="../images/list-ideas-03.png" width="70%" alt="prompt" />
 
+As you can see, providing one example before generating with your LLM is called Single Shot Prompting, but adding more examples into your prompt is common practice as well. Generally, increasing the number of examples is referred to as “Few Shot Prompting” and is a powerful tool to ensure you have a specific output.
 
-### 1.4 Include descriptive details
+### 1.5 Include descriptive details
 
 The more guidance, the better:
 
@@ -46,7 +59,11 @@ The more guidance, the better:
 
 
 ### 2.0 Adjusting the model's behaviour
-Watsonx.ai provides multiple parameters for congfiguring how LLMs respond to a prompt.  Selecting the correct parameters can often be more art than science.  Investing time into understanding then tweaking these parameters will be rewarded by better responses.
+The first change we can make is what model (LLM) we use to evaluate our prompt. This is one of the biggest changes you can make, as certain models are better built for specific tasks. The exercises later on this lab will force you to change the model you use if you want to answer some of the more challenging questions.
+
+In general, some models perform better working with summarization, key words, and semantics, while other models do better with structured text such as HTML, markdown, or JSON. The best way to figure out which models apply for your use case is to simply test them, but it is important to know that choice of model can make a big difference!
+
+Watsonx.ai also provides multiple parameters for congfiguring how LLMs respond to a prompt.  Selecting the correct parameters can often be more art than science.  Investing time into understanding then tweaking these parameters will be rewarded by better responses.
 
 Explore these parameters with the following text:
 ```
@@ -96,11 +113,13 @@ If the response is too generic or going on wild tangents, consider adjusting the
 
 **Decoding** is the process of finding the output sequence given the input sequence:
 
-- **Greedy decoding** selects the word with the highest probability at each step of the decoding process.
+- **Greedy decoding** selects the word with the highest probability at each step of the decoding process. 
 - **Sampling decoding** selects words from a probability distribution at each step:
   - **Temperature** refers to selecting high- or low-probability words.  Higher temperature values lead to more variability.
   - **Top-p** (nucleus sampling) refers to selecting the smallest set of words whose cumulative probability exceeds p.
   - **Top-k** refers to selecting k words with the highest probabilities at each step.  Higher values lead to more variability.
+
+An advantage of greedy decoding is that you will see reproducible results. This can be useful for testing. Setting temperature to 0 in a sampling decoding approach gives the same variance as greedy decoding.
 
 <img src="../images/2.3-0.png" width="80%" alt="prompt" />
 
