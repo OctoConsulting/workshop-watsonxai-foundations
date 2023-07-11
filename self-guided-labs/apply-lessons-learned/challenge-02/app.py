@@ -63,8 +63,8 @@ for i, button_click in enumerate(button_clicks):
 user_question = placeholder.text_input("Enter your question", value=question_text, key='user_question_input')
 
 # Add tabs for details about the models response
-passage_count_to_summarize = 3
-tab_answer, tab_top_passages, tab_prompt = st.tabs(["Answer", f"Top {passage_count_to_summarize} Passages", "Prompt"])
+passage_count_to_summarize = 5
+tab_answer, tab_top_passages, tab_prompt = st.tabs(["Summary", f"Top {passage_count_to_summarize} Passages", "Prompt"])
 
 if user_question:
     # Load utilities to search the SEC 10Ks
