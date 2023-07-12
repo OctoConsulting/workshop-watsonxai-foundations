@@ -1,15 +1,12 @@
-import math
-import numpy as np
 import os
 
-from chromadbWrapper import ChromaDBWrapper
+import streamlit as st
 
+from chromadbWrapper import ChromaDBWrapper
 from dotenv import load_dotenv
 from genai.model import Credentials
 from genai.schemas import GenerateParams, ModelType 
 from genai.extensions.langchain import LangChainInterface
-from langchain.prompts import PromptTemplate
-import streamlit as st
 
 PASSAGE_PLACEHOLDER = "{passages}"
 
@@ -33,23 +30,23 @@ class DocumentSearch:
                                 temperature=model_parameters["temperature"],
                                 top_k=model_parameters["top_k"],
                                 top_p=model_parameters["top_p"], 
+                                random_seed=model_parameters["random_seed"],
                                 repetition_penalty=model_parameters["repetition_penalty"])
         self.llm = LangChainInterface(model=ModelType.FLAN_UL2, params=params, credentials=creds)
 
-    def sum_of_summary_for_question(self, parquet_passage_file, question, prompt_initial, passage_count_to_summarize):
-        # Summarize 2 passages at a time
-        matching_passages = self.get_matching_passages(parquet_passage_file, question, passage_count_to_summarize)
-        passages_to_summarize = np.array_split(matching_passages, math.ceil(passage_count_to_summarize/2))
-        summaries = []
-        for passages in passages_to_summarize:
-            prompt_final, summary = self._summarize_passages(passages, prompt_initial)
-            print(f"prompt_final: {prompt_final}")
-            summaries.append(summary)
-        return self._summarize_passages(summaries, prompt_initial)
-    
     def answer_question(self, parquet_passage_file, question, prompt_initial, passage_count_to_summarize):
-        passages = self.get_matching_passages(parquet_passage_file, question, passage_count_to_summarize)        
-        return self._summarize_passages(passages, prompt_initial)
+        if passage_count_to_summarize > 0:
+            passages = self.get_matching_passages(parquet_passage_file, question, passage_count_to_summarize)        
+            passages_str = ""
+            for i, passage in enumerate(passages):
+                if i > 0:
+                    passages_str += "\n\n"
+                passages_str += f"passage #{i+1}: {passage}"
+            prompt_final = prompt_initial.replace(PASSAGE_PLACEHOLDER, passages_str)
+        else:
+            prompt_final = prompt_initial
+        summary = self.llm(prompt_final)
+        return prompt_final, summary
     
     def get_matching_passages(self, parquet_passage_file, question, passage_count_to_summarize): 
         if self.current_parquet_passage_file is not parquet_passage_file:
@@ -61,16 +58,5 @@ class DocumentSearch:
         for passage in matches['documents'][0]:
             passages.append(passage)
         return passages
-
-    # Private method
-    def _summarize_passages(self, passages, prompt_initial):
-        passages_str = ""
-        for i, passage in enumerate(passages):
-            if i > 0:
-                passages_str += "\n\n"
-            passages_str += f"passage #{i+1}: {passage}"
-        prompt_final = prompt_initial.replace(PASSAGE_PLACEHOLDER, passages_str)
-        summary = self.llm(prompt_final)
-        return prompt_final, summary
 
 

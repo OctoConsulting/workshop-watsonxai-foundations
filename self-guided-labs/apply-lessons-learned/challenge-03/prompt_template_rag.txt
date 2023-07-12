@@ -1,0 +1,9 @@
+Using these passages from the SEC 10K filed by {company_name}.
+
+{passages}
+
+Summarize the passages above to answer the following question about {company_name}.  Respond in complete sentences.  If the passages don't answer the question, then reply with "Sorry, I can't answer with the given passages."
+
+question: {question}
+
+answer:

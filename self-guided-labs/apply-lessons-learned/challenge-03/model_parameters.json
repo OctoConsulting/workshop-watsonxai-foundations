@@ -1,0 +1,10 @@
+{
+    "decoding_method" : "sample",
+    "max_new_tokens" : 250,
+    "min_new_tokens" : 25,
+    "temperature" : 0.8,
+    "top_k" : 100,
+    "top_p" : 1, 
+    "repetition_penalty" : 1,
+    "random_seed" : 1234
+}    
