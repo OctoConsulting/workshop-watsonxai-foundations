@@ -12,6 +12,9 @@ ROOT_DIR = "data"
 COMPANY_PLACEHOLDER = "{company_name}"
 QUESTION_PLACEHOLDER = "{question}"
 
+def scroll_to_prompt(prompt_id):
+    st.session_state.scroll_to_prompt = prompt_id
+
 # Detect all companies available to search
 companies = []
 for folder_name in listdir(ROOT_DIR):
@@ -20,7 +23,7 @@ for folder_name in listdir(ROOT_DIR):
 companies = sorted(companies)
 
 questions = [   "How much debt does the company have and what are its yearly payments?",
-                "How does the company reduce risk due to foreign current exposure?",
+                "How does the company reduce risk due to foreign currency exposure?",
                 "What litigation is pending and what monetary loss could occur?",
                 "What acquisitions have completed and how much did they cost?"  ]
 
@@ -36,7 +39,7 @@ with st.sidebar:
     st.write('Example questions')
     button_clicks = []
     for i, question in enumerate(questions):
-        button_clicks.append(st.button(question, key='button_' + str(i)))
+        button_clicks.append(st.button(question, key='examples_' + str(i)))
     
 # Allow disabling rag to see what non-rag response looks like
 is_rag_enabled = True
@@ -86,10 +89,35 @@ for i, button_click in enumerate(button_clicks):
 # Buttons added so now place question field in our prior placeholder
 user_question = st.text_input("Enter your question", value=question_text, key='user_question_input')
 
-# Add tabs for details about the models response
-tab_answer, tab_top_passages, tab_all_passages, tab_prompt, tab_settings = st.tabs(["Summary", f"Top {passage_count_to_summarize} Passages", "All Passages", "Prompt", "Settings"])
+# Single or nested summary?
+is_summary_of_summaries = False
+if "is_summary_of_summaries" in st.session_state:
+    is_summary_of_summaries = st.session_state.is_summary_of_summaries
 
-if user_question:
+# Add tabs for details about the models response
+summary_tab_title = "Summary"
+if is_summary_of_summaries:
+    summary_tab_title = "Sum of Summaries"
+
+tab_answer, tab_top_passages, tab_all_passages, tab_prompt, tab_settings = st.tabs([summary_tab_title, f"Top {passage_count_to_summarize} Passages", "All Passages", "Prompt", "Settings"])
+
+with tab_settings:
+    if is_rag_enabled:
+        st.text_area("Prompt Template (with RAG)", prompt_template_rag_original, key='prompt_template_rag_custom')
+    else:
+        st.text_area("Prompt Template (without RAG)", prompt_template_no_rag_original, key='prompt_template_no_rag_custom')
+    st.text_area("Model Parameters", json.dumps(model_parameters_json), key='custom_model_parameters')
+    st.text_input("Passage count to summarize", value=passage_count_to_summarize, key='passage_count')
+    st.checkbox("Show model's response without passages to summarize", key='is_rag_disabled')
+    st.checkbox("Perform nested sum of summaries", key='is_summary_of_summaries')
+
+if not user_question:
+    with tab_answer: st.write("Waiting for question...")
+    with tab_top_passages: st.write("Waiting for question...")
+    with tab_all_passages: st.write("Waiting for question...")
+    with tab_prompt: st.write("Waiting for question...")
+
+else:
     # Update prompt template with current input
     prompt_template = prompt_template.replace(COMPANY_PLACEHOLDER, selected_company)
     prompt_template = prompt_template.replace(QUESTION_PLACEHOLDER, user_question)
@@ -110,11 +138,18 @@ if user_question:
         # https://discuss.streamlit.io/t/how-to-wrap-long-text-with-triggering-latex/33776
         matching_passages.append(passage.replace("$", "\$") )
 
-    prompt_final, summary = sec_10k_search.answer_question(parquet_passage_file, user_question, prompt_template, is_rag_enabled, passage_count_to_summarize)
+    if not is_rag_enabled:
+        passage_count_to_summarize = 0
+
+    if is_summary_of_summaries:
+        prompt_final, summary = sec_10k_search.sum_of_summary_for_question(parquet_passage_file, user_question, prompt_template, passage_count_to_summarize)
+    else:
+        prompt_final, summary = sec_10k_search.answer_question(parquet_passage_file, user_question, prompt_template, passage_count_to_summarize)
+    
+    summary = summary.replace("$", "\$")
+    prompt_final = prompt_final.replace("$", "\$")
+
     with tab_answer:
-        # Streamlit uses Latex which uses the dollar sign (4) as a special character so we must escape it as below.
-        # https://discuss.streamlit.io/t/how-to-wrap-long-text-with-triggering-latex/33776
-        summary = summary.replace("$", "\$")
         st.write(summary)
 
     with tab_top_passages:
@@ -128,13 +163,19 @@ if user_question:
         if is_rag_enabled:
             sec_10k_df = pd.read_parquet(parquet_passage_file)
             sec_10k_passsages = sec_10k_df["text"].values.tolist()
-            #sec_10k_passsage_ids = sec_10k_df["passage_id"].values.tolist()
+            passage_counter = 0
+            st.button("Go to match >", key=f"passages_{1}", on_click=scroll_to_prompt, args=(0,))
             for passage in sec_10k_passsages:
                 # Streamlit uses Latex which uses the dollar sign (4) as a special character so we must escape it as below.
                 # https://discuss.streamlit.io/t/how-to-wrap-long-text-with-triggering-latex/33776
                 passage = passage.replace("$", "\$")
                 if passage in matching_passages:
-                    annotated_text((passage, "RAG MATCH", "#FFFBA6"))
+                    if passage_counter >= 1:
+                        st.button(f"< prior match", key=f"prior_{passage_counter}", on_click=scroll_to_prompt, args=(passage_counter-1,))                        
+                    if passage_counter < len (matching_passages)-1: 
+                        st.button(f"Next match >", key=f"next_{passage_counter}", on_click=scroll_to_prompt, args=(passage_counter+1,))
+                    annotated_text((passage, f"RAG MATCH {passage_counter}", "#FFFBA6"))
+                    passage_counter += 1
                 else:
                     st.write(passage)
         else:
@@ -143,14 +184,21 @@ if user_question:
     with tab_prompt:
         st.write(prompt_final)
 
-    with tab_settings:
-        
-        if is_rag_enabled:
-            st.text_area("Prompt Template (with RAG)", prompt_template_rag_original, key='prompt_template_rag_custom')
-        else:
-            st.text_area("Prompt Template (without RAG)", prompt_template_no_rag_original, key='prompt_template_no_rag_custom')
-        st.text_area("Model Parameters", json.dumps(model_parameters_json), key='custom_model_parameters')
-        st.text_input("Passage count to summarize", value=passage_count_to_summarize, key='passage_count')
-        st.checkbox("Show model's response without passages to summarize", key='is_rag_disabled')
-
-
+if "scroll_to_prompt" in st.session_state:
+    prompt_id = st.session_state.scroll_to_prompt
+    # Define the scroll operation as a javascript function then call that function
+    js = f"""
+    <script>
+        function scrollPassageIntoView(prompt_id) {{
+            // st's html() function encloses this into an iFrame so must use parent.document
+            var spans = parent.document.getElementsByTagName("span");
+            for (let i = 0; i < spans.length; i++) {{
+                if (spans[i].innerHTML == 'RAG MATCH ' + prompt_id) {{
+                    spans[i].scrollIntoView();
+                }}
+            }}
+        }}
+        scrollPassageIntoView('{prompt_id}')</script>
+    """
+    st.components.v1.html(js)
+    del st.session_state.scroll_to_prompt
