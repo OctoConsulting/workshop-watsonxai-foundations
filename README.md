@@ -1,5 +1,5 @@
 # Technical Hands-On Labs: Foundations of watsonx.ai 
-Completing these technical hands-on labs will take roughly 16 hours plus another 2-3 hours to complete the Apply Lessons Learned labs. You should have completed the [attendee pre-requisites](attendee-prerequisites.md) prior to starting.
+Completing these technical hands-on labs will take roughly 12 hours plus another 2-3 hours to complete the Apply Lessons Learned labs. You should have completed the [attendee pre-requisites](attendee-prerequisites.md) prior to starting.
 
 # Agenda
 ### What Is Watsonx.ai
