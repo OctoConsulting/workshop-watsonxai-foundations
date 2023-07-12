@@ -21,5 +21,3 @@ https://yourlearning.ibm.com/channel/CNL_IEC_10346620
 Want to get a jump start on some topics?
 1. Course 1 (Prompt Engineering): https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction (2-3 hours)
 2. Course 2 (LangChain): https://learn.deeplearning.ai/langchain/lesson/1/introduction (3-4 hours)
-3. Get access to the workbench: https://workbench.res.ibm.com/
-4. Read API documentation: https://workbench.res.ibm.com/docs. Run samples that are provided in documentation.
