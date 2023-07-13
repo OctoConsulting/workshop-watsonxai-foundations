@@ -16,7 +16,7 @@ If Conda is your choice for a Python Environment Manager, then [install minicond
 Download [requirements_conda.txt](./requirements_conda.txt), which contains the list of initial packages to install in your environment.  Then open a terminal/console window and enter the commands below to create a Conda environment called `genai` with Python version 3.11.
 ```
 cd <full path to folder containing downloaded requirements_conda.txt file>
-conda create --name genai --file requirements_conda.txt python=3.11 --channel anaconda
+conda create --name genai --file requirements_conda.txt python=3.11
 ```
 
 #### requirements_conda.txt
