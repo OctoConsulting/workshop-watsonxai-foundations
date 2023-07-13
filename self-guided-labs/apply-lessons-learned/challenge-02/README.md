@@ -1,16 +1,24 @@
-# Challenge 1 - Applying what you've learned
+# Challenge 2 - Multi-turn interaction between two models
 
-### Congratulations!
-You've just completed the easy part of the Watsonx.ai Boot Camp.  Now the challenge begins.
+Your mission in this Challenge is to implement a multi-turn interaction between two models.  You saw an introduction to this in the [GenAI and LangChain lab](../../self-guided-labs/level-1/lab-03-genai-and-prompt-patterns) where you connected to models.  In that case, the first model was asked to generate a question and the second model generated a response.  Your task is to extend that approach to achieve a multi-turn interaction.  
 
-To complete the foundations of watsonx.ai technical series, we have provided a [notebook using generative AI to classify text in news articles](./news-article-classification.ipynb). Read through the notebook to understand how it approached the challenge of classifying text.  Your mission is to rewrite the notebook by applying your new skills in prompt engineering to achieve a higher accuracy (already a high 90+%):
+<p align="center">
+  <img src="images/q&a agents.png" width="750"/>
+</p>
 
-**Few Ideas?**
-- Use the IBM GenAI Python library's Prompt Patterns functionality?
-- Implement a better few-shot learning technique to improve model accuracy?
-- Perhaps be a rebel and show that a standard ML model performs better?
+Here are an approach to consider :
+1. Try to give your models personalities
+2. Have them engage in a conversation, ideally 5 or more back-and-forths.
+3. Give the models a top for their conversation, perhaps philosophical or just about the weather.
 
-Now, [open the Challenge 1 notebook](./news-article-classification.ipynb) to get started. How much can you improve model performance?
+Perhaps try something more sophisticated?  Make one agent responsible for user authentication and the other as a user with personal details that they need to provide.  Can you recreate an exchange like below using only models?
+
+<p align="center">
+  <img src="images/multi-turn-user-auth.png" width="400"/>
+</p>
+
+### Get started
+This challenge is all yours so use any of the prior Lab notebooks to get started.
 
 ### Finished?
 Submit your completed notebooks to Anthony Stevens at apsteven@us.ibm.com.  
