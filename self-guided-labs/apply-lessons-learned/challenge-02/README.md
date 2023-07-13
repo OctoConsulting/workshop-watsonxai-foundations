@@ -21,4 +21,5 @@ Perhaps try something more sophisticated?  Make one agent responsible for user a
 This challenge is all yours so use any of the prior Lab notebooks to get started.
 
 ### Finished?
-Submit your completed notebooks to Anthony Stevens at apsteven@us.ibm.com.  
+Submit your completed notebooks to Anthony Stevens at apsteven@us.ibm.com.  We are excited to learn from you and see what you create.
+
