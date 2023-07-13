@@ -31,8 +31,10 @@ Completing these technical hands-on labs will take roughly 12 hours plus another
 | 45 mins  | Lab 1: [Watson Code Assistant and Ansible Lightspeed](./self-guided-labs/products/lab-01-watson-code-assistant) | 
 
 ### Apply Lessons Learned (CHOOSE ONE)
-You've made it to the end.  Almost. You will now apply the new skills that you've learned to the challenges below.  Be creative.  These challenges are specifically open-ended.  Combine your own unique skills to extend the use case solutions provided in these challenges.    
+You've made it to the end.  Almost. You will now apply the new skills that you've learned to the challenges below.  Select one of the challenges below and be creative.  These challenges are specifically open-ended.  Combine your own unique skills to extend the use case solutions provided in these challenges.    
 | **Time**        | **Topic** |
 |-----------------|-------------------|
-| 2+ hours  | Challenge 1: [Text Classification of News Articles](./self-guided-labs/apply-lessons-learned/challenge-01) | 
-| 2+ hours  | Challenge 2: [RAG Search of SEC 10K Filings With Streamlit](./self-guided-labs/apply-lessons-learned/challenge-02) | 
+| 1  hour  | Challenge 1: [Text Classification of News Articles](./self-guided-labs/apply-lessons-learned/challenge-01) | 
+| 2  hours  | Challenge 2: [Multi-Turn Model Interactions](./self-guided-labs/apply-lessons-learned/challenge-02) | 
+| 2  hours  | Challenge 3: [Visualize Model Conversation With Streamlit](./self-guided-labs/apply-lessons-learned/challenge-03) | 
+| 2+ hours  | Challenge 4: [RAG Search of SEC 10K Filings With Streamlit](./self-guided-labs/apply-lessons-learned/challenge-04) | 
