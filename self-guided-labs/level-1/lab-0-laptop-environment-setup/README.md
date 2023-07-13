@@ -7,7 +7,7 @@ Complete the steps in this guide to ensure your desktop environment has all the 
 - [1: Connect to watsonx.ai](#connect-to-watsonxai)
 - [2: Clone the Workshop's Github repo](#clone-watsonxai-repo)
 - [3: Create virtual Python environment (and install required libraries)](#virtual-environment)
-- [4. Run Jupyter Notebook](#jupyter-notebook)
+- [4. Run Jupyter Notebook and Validate All Libraries Installed](#jupyter-notebook)
 - [5. Install Visual Studio Code (VS Code)](#vs-code)
 - [6: Access watsonx.ai Workbench](#access-watsonxai-workbench)
 - [7: Security and .env Files](#environment-files)
@@ -26,13 +26,18 @@ To ensure all required Python libraries are installced, [complete these steps to
 
 **NOTE:** Don't skip setting up your Python environment as the documented steps ensure you have installed IBM GenAI Python library, Jupyter Notebook, ChromaDB, Hugging Face and all other required libraries.
 
-### 4: Run Jupyter Notebook <a id="jupyter-notebook"></a>
-You will have installed Jupyter Notebooks as part of your Virtual Environment setup in [Step #1](create-virtual-python-environment.md). There are several Jupyter notebooks in this Boot Camp.  Use the "cd" command to change to the directory holding those notebooks when ready and launch Jupyter as below.
+### 4: Run Jupyter Notebook and Validate All Libraries Installed<a id="jupyter-notebook"></a>
+You will be executing several Jupyter notebooks during this workshop.  The Jupyter Notebook executable was installed as part of your Virtual Environment setup in [Step #1](create-virtual-python-environment.md).   You will now ensure that you can run Jupyter Notebooks plus validate that all required Python libraries were installed.
+
+Download this [environment test notebook](./environment-test.ipynb) or use the one that your cloned version of this Github repository.  Use the "cd" command to change to the directory holding those notebooks when ready and launch Jupyter as below.
+
 ```
-cd <full path to folder with notebook to execute>
+<ensure your python environment is active>
+cd <full path to folder containing the environment test notebook>
 jupyter notebook
 ```
-You can now open a browser window and navigate to http://localhost:8888/notebooks/ to create a notebook.
+
+Jupyter shoud automatically open a browser window for you.  If not, navigate to http://localhost:8888/notebooks/ to run the notebook.
 
 ### 5: Install Visual Studio Code (VS Code) <a id="vs-code"></a>
 Most development and data science teams within IBM (and outside) have selected VS Code as their default coding environment.  You can choose to use an alternate IDE for this Boot Camp (like PyCharm or Eclipse), however the Boot Camp coaches will be less skilled at supporting those IDEs.  We recommend installing VS Code so you are on a common platform with most of your IBM colleagues.
