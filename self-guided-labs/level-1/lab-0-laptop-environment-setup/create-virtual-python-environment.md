@@ -32,7 +32,7 @@ You can validate that your environment is active by looking at the start of the 
 </p>
 
 #### Dectivate your Python virtual environment
-You deactivate your environment using the command below:
+If you need to change to a different environment, you can deactivate your current environment using the command below:
 ```
 deactivate
 ```
