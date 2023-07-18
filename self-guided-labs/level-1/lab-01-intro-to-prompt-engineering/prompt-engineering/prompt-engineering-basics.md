@@ -23,7 +23,8 @@ It is important to understand what tokens are so that you know how much informat
 
 ### 1.2 Everything is text completion
 
-watsonx.ai is not a chatbot interface so just specifying an instruction or question rarely produces a good result. For instance, what if we ask Watsonx.ai to "List ideas to start a dog-walking business"?
+watsonx.ai is not a chatbot interface so just specifying an instruction or question rarely produces a good result. For instance, what if we ask Watsonx.ai to:
+```List ideas to start a dog-walking business?```
 
 <img src="../images/1.1.png" width="80%" alt="prompt" />
 
@@ -44,6 +45,18 @@ To receive a higher-quality response, provide an example of the kind of response
 <img src="../images/list-ideas-03.png" width="70%" alt="prompt" />
 
 As you can see, providing one example before generating with your LLM is called Single Shot Prompting, but adding more examples into your prompt is common practice as well. Generally, increasing the number of examples is referred to as “Few Shot Prompting” and is a powerful tool to ensure you have a specific output.
+
+Copy paste to get started experimenting:
+
+```
+List ideas to start a lemonade business:
+1. Setup a lemonade stand
+2. Partner with a restaurant
+3. Arrange for a celebrity to endorse the lemonade
+
+List ideas to start a dog-walking business:
+1. 
+```
 
 ### 1.5 Include descriptive details
 
@@ -73,6 +86,7 @@ List ideas to start a lemonade business:
 3. Arrange for a celebrity to endorse the lemonade
 
 List ideas to start a dog-walking business:
+1. 
 ```
 
 ### 2.1 Set the min and max tokens
