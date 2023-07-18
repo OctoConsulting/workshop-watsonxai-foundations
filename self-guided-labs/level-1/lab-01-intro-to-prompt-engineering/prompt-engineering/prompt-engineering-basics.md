@@ -1,7 +1,7 @@
 # Prompt engineering
 
 ### 1.0 Balancing intelligence and security
-With great artificial intelligence comes security risks. Solutions like ChatGPT are more than Large languge Models (LLMs).  ChatGPT's underlying LLMs have been fine-tuned by the OpenAI teams using an additional Chat dataset plus a RLHF (Reinforcement Learning Human Feedback) dataset so it's much more than a standard LLM, it's a chatbot-enabled LLM.  An LLM with 175 billion parameters. 
+With great artificial intelligence comes security risks. Solutions like ChatGPT are more than Large language Models (LLMs).  ChatGPT's underlying LLMs have been fine-tuned by the OpenAI teams using an additional Chat dataset plus a RLHF (Reinforcement Learning Human Feedback) dataset so it's much more than a standard LLM, it's a chatbot-enabled LLM.  An LLM with 175 billion parameters. 
 
 In watsonx.ai, we are interacting directly with smaller LLMs (3-20 billion parameters).  This is a wise choice from a security POV. Prompt injection is a major risk for enterprise uses of LLMs. In prompt injections, a hacker will create an intricate prompt in order to cause a LLM such as ChatGPT to ignore/bypass security protocols and reveal sensitive company information. Just imagine you're a hacker.  Which model would you choose to target for prompt injection? OpenAI's ChatGPT with 175 billion parameters or the smaller and more-focused Prompt-Tuned 3 billion parameter models that you'll eventually be building?  Which has a larger attack surface for prompt re-engineering?
 
