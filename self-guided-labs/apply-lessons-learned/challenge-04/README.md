@@ -21,6 +21,17 @@ In order to execute this Challenge, you will need to install these additional li
 - st-annotated-text (version >= 1.0.1)
 - streamlit-chat (version >= 0.1.1)
 
+You can do this by running these commands:
+```
+pip install st-annotated-text
+
+```
+
+```
+pip install streamlit-chat
+
+```
+
 ## Launch the demo app
 1. Open your terminal or console window
 2. cd into this Challenge's base directory
