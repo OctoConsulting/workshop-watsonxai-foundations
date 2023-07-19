@@ -38,7 +38,6 @@ class ChromaDBWrapper:
                         zip(self.sec_10k_passsages, self.sec_10k_passsage_ids)],  # filter on these!
                 ids=self.sec_10k_passsage_ids,  # unique for each doc
             )
-            self.persist()
 
     def upsert_texts(
         self,
@@ -54,9 +53,6 @@ class ChromaDBWrapper:
 
     def is_empty(self):
         return self._collection.count()==0
-
-    def persist(self):
-        self._client.persist()
 
     # return: the closest result to the given question
     def query(self, query_texts:str, n_results:int=5):
