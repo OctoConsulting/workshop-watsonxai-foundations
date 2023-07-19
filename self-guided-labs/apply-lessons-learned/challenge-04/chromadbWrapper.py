@@ -23,11 +23,7 @@ class ChromaDBWrapper:
         self.sec_10k_passsages = self.sec_10k_df["text"].values.tolist()
         self.sec_10k_passsage_ids = self.sec_10k_df["passage_id"].values.tolist()
 
-        self._client_settings = chromadb.config.Settings(
-            chroma_db_impl="duckdb+parquet",
-            persist_directory=os.path.dirname(parquet_passage_file)
-        )
-        self._client = chromadb.Client(self._client_settings)
+        self._client = chromadb.PersistentClient(path=os.path.dirname(parquet_passage_file))
         self._collection = self._client.get_or_create_collection(name = f"sec_10k_minilm6v2", 
                                                                  embedding_function = MiniLML6V2EmbeddingFunction())
         self.initialize_db()
