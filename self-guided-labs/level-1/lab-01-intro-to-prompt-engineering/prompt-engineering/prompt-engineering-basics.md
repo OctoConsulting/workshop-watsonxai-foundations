@@ -1,7 +1,7 @@
 # Prompt engineering
 
 ### 1.0 Balancing intelligence and security
-With great artificial intelligence comes security risks. Solutions like ChatGPT are more than Large languge Models (LLMs).  ChatGPT's underlying LLMs have been fine-tuned by the OpenAI teams using an additional Chat dataset plus a RLHF (Reinforcement Learning Human Feedback) dataset so it's much more than a standard LLM, it's a chatbot-enabled LLM.  An LLM with 175 billion parameters. 
+With great artificial intelligence comes security risks. Solutions like ChatGPT are more than Large language Models (LLMs).  ChatGPT's underlying LLMs have been fine-tuned by the OpenAI teams using an additional Chat dataset plus a RLHF (Reinforcement Learning Human Feedback) dataset so it's much more than a standard LLM, it's a chatbot-enabled LLM.  An LLM with 175 billion parameters. 
 
 In watsonx.ai, we are interacting directly with smaller LLMs (3-20 billion parameters).  This is a wise choice from a security POV. Prompt injection is a major risk for enterprise uses of LLMs. In prompt injections, a hacker will create an intricate prompt in order to cause a LLM such as ChatGPT to ignore/bypass security protocols and reveal sensitive company information. Just imagine you're a hacker.  Which model would you choose to target for prompt injection? OpenAI's ChatGPT with 175 billion parameters or the smaller and more-focused Prompt-Tuned 3 billion parameter models that you'll eventually be building?  Which has a larger attack surface for prompt re-engineering?
 
@@ -23,7 +23,8 @@ It is important to understand what tokens are so that you know how much informat
 
 ### 1.2 Everything is text completion
 
-watsonx.ai is not a chatbot interface so just specifying an instruction or question rarely produces a good result. For instance, what if we ask Watsonx.ai to "List ideas to start a dog-walking business"?
+watsonx.ai is not a chatbot interface so just specifying an instruction or question rarely produces a good result. For instance, what if we ask Watsonx.ai to:
+```List ideas to start a dog-walking business?```
 
 <img src="../images/1.1.png" width="80%" alt="prompt" />
 
@@ -44,6 +45,18 @@ To receive a higher-quality response, provide an example of the kind of response
 <img src="../images/list-ideas-03.png" width="70%" alt="prompt" />
 
 As you can see, providing one example before generating with your LLM is called Single Shot Prompting, but adding more examples into your prompt is common practice as well. Generally, increasing the number of examples is referred to as “Few Shot Prompting” and is a powerful tool to ensure you have a specific output.
+
+Copy paste to get started experimenting:
+
+```
+List ideas to start a lemonade business:
+1. Setup a lemonade stand
+2. Partner with a restaurant
+3. Arrange for a celebrity to endorse the lemonade
+
+List ideas to start a dog-walking business:
+1. 
+```
 
 ### 1.5 Include descriptive details
 
@@ -73,6 +86,7 @@ List ideas to start a lemonade business:
 3. Arrange for a celebrity to endorse the lemonade
 
 List ideas to start a dog-walking business:
+1. 
 ```
 
 ### 2.1 Set the min and max tokens
