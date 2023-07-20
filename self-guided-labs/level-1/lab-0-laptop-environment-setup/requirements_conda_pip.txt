@@ -1,7 +1,0 @@
-chromadb
-sentence-transformers
-ibm-generative-ai
-langchain
-pypdf
-rouge
-streamlit
