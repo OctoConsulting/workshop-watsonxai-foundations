@@ -1,7 +1,0 @@
-ipywidgets
-jupyter
-matplotlib
-pandas
-plotly
-python-dotenv
-requests
