@@ -7,7 +7,6 @@ Completing these technical hands-on labs will take roughly 12 hours plus another
 |-----------------|-------------------|
 | 20 mins  | [Technical POV on watsonx.ai Platform](watsonxai-platform.md) | 
 | 10 mins  | [IBM's Foundation Models](ibm-foundation-models.md) | 
-| 15 mins  | [Guided Tour of watsonx.ai UI](https://ibm.box.com/s/vcebyqr1kzy9hj8z6xssq2ryq18cdk2q)  | 
 
 ### Foundations of Watsonx.ai
 | **Time**        | **Topic** |
