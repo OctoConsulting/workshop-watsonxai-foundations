@@ -13,7 +13,10 @@ Here are the key timelines for release of IBM's various foundation models.  You 
   <img src="images/ibm-foundation-models-ga.png" width="750"/>
 </p>
 
-## Optional Reading: Intro to Transformer Model Architectures
+## Optional Reading #1: Illustrated Transformer
+Want to learn more about the Transformers that everyone's talking about?  Read this [blog post which visually illustrates many aspects of transformers](https://jalammar.github.io/illustrated-transformer/). 
+
+## Optional Reading #2: Intro to Transformer Model Architectures
 Kate quickly mentions Decoder-Only models plus Encoder-Decoder models.  It's valuable to understand the distinction between these plus when to use each type of model.  For exmple, you saw in Kate's presentation that IBM's Granite models (like MPT) are decoder-only models while IBM's Sandstone models are Encoder-Decoder models (like flan-ul2).  Here's a quick introduction to the [difference between encoder decoder model architecture and capabilities](https://magazine.sebastianraschka.com/p/understanding-encoder-and-decoder).
 
 OK, now which of these architectures is used by the GPT family of models?
