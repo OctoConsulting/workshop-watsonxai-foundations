@@ -17,9 +17,13 @@ Before we jump into exploring the capabilities of watsonx.ai, we first need to l
 
 <img src="../images/0.1.png" width="80%" alt="prompt" />
 
-When you open up your prompt lab, this is the view you will be shown.  Each time you enter a prompt, you will have “input tokens” and “generated tokens”. Tokens are to our model what words are to us — although they can vary. Depending on the circumstance, tokens can be sequences of characters or even words themselves. As you will see when you experiment with the prompt lab, tokens are not necessarily a 1:1 match with words in natural language, but it is an approximation you can use when trying to estimate!
+When you open up your prompt lab, this is the view you will be shown.  The large central text area is called Prompt Lab, or Prompt Builder if you select the more advanced view by clicking the checkbox at top-left.  On the right-side are model parameters that you can use to select to optimize how the model responds to your prompt.  And on the bottom-left, is a summary of the number of tokens used by your prompt during execution.
 
-It is important to understand what tokens are so that you know how much information you are feeding the model when you give it a prompt, as well as how much information you expect it to generate for you. There is a max of 4096 tokens in the prompt builder, so keep in mind that the more expressive you are with your prompt instructions, the less room the model will have to respond back to you.
+### 1.1.1 Tokens
+
+Each time you enter a prompt, your “input tokens” and “generated tokens” will update. Tokens are an important concept to understand as they constrain the performance of your model plus determine the cost of using models.  As you will learn throughout the Labs, tokens are not a 1:1 match with words in natural language, but on average, one token is equal to 4 characters.  Before sending your prompt to the model, the prompt's text is Tokenized or broken into smaller subsets of characters better understood by a model.
+
+It is important to understand monitor your token usage to know how much information you are feeding into the model with each prompt, as well as how much text is generated for you. Depending on the model selected in Prompt Builder, you will see a max of 2048 or 4096 tokens.  Keep in mind that the more expressive you are with your prompt instructions, the less room the model has to respond back to you.
 
 ### 1.2 Everything is text completion
 
@@ -160,6 +164,9 @@ However, when text is still repetative even with a higher temperature, you can t
 <img src="../images/2.4-1.png" width="85%" alt="Repetative penalty" />
 
 This example shows the challenge: the bullet points are repetition that we want!  So penalizing repetitiveness might break your results too.
+
+### 2.5 Excellent 3rd party blog post on model parameters
+Read this [post on model parameters](https://txt.cohere.com/llm-parameters-best-outputs-language-ai) which provides excellent examples of how model parameters work plus good visuals to help you better understand the concepts.
 
 # General advice
 
