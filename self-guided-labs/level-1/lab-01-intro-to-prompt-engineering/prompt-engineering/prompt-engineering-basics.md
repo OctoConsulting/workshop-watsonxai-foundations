@@ -156,7 +156,7 @@ However, when text is still repetative even with a higher temperature, you can t
 This example shows the challenge: the bullet points are repetition that we want!  So penalizing repetitiveness might break your results too.
 
 ### 2.5 Excellent 3rd party blog post on model parameters
-Read this [post on model parameters](https://txt.cohere.com/llm-parameters-best-outputs-language-ai) which provides excellent examples of how model parameters work plus good visuals to help you better understand the concepts.
+The descriptions above provide a good introduction to model parameters.  However you should [read this 3rd party post on model parameters](https://txt.cohere.com/llm-parameters-best-outputs-language-ai) which provides excellent additional examples of how model parameters work plus good visuals to help you better understand the concepts.  The better you understand model parameters, the less frustrated you will be and more empowered to tweak the models to perform as needed for your use case.
 
 # General advice
 
