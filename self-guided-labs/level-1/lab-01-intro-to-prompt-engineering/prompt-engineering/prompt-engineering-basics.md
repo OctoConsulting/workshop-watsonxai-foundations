@@ -1,25 +1,19 @@
 # Prompt engineering
 
-### 1.0 Balancing intelligence and security
-With great artificial intelligence comes security risks. Solutions like ChatGPT are more than Large language Models (LLMs).  ChatGPT's underlying LLMs have been fine-tuned by the OpenAI teams using an additional Chat dataset plus a RLHF (Reinforcement Learning Human Feedback) dataset so it's much more than a standard LLM, it's a chatbot-enabled LLM.  An LLM with 175 billion parameters. 
-
-In watsonx.ai, we are interacting directly with smaller LLMs (3-20 billion parameters).  This is a wise choice from a security POV. Prompt injection is a major risk for enterprise uses of LLMs. In prompt injections, a hacker will create an intricate prompt in order to cause a LLM such as ChatGPT to ignore/bypass security protocols and reveal sensitive company information. Just imagine you're a hacker.  Which model would you choose to target for prompt injection? OpenAI's ChatGPT with 175 billion parameters or the smaller and more-focused Prompt-Tuned 3 billion parameter models that you'll eventually be building?  Which has a larger attack surface for prompt re-engineering?
-
-As you can imagine, using relatively smaller models such as those utilized in watsonx.ai creates a much bigger challenge for a potential hacker. Using many small models rather than a single large one such as ChatGPT creates a wide distribution of sensitive data. In addition, each small language model is much harder (if not impossible) to manipulate due the high level of prompt engineering that is needed for them to perform their primary tasks. They don’t have the wide range of functions such as ChatGPT (e.g. chatbot capabilities), so the majority of prompt injection attempts will be misunderstood or ignored by the language model agent.
-
-That's right.  For security, smaller is better. On top of security benefits, there computational improvements with using smaller, lighter weight models as well. However we're getting ahead of ourselves.  Let's first interact with a few of watsonx.ai's LLMs to better understand and learn how to make them respond the way we need.
-
 **Note:** The following images show actual results from watsonx.ai. The slight gray text is what we provided to the model.  The blue highlighted text is how the model responded.
 
-### 1.1 LLM Foundations
-
-Before we jump into exploring the capabilities of watsonx.ai, we first need to lay a foundation for how each of our LLMs works, and how we can tune the model and parameters to change our output. Gaining this understanding will make us more effective prompt engineers, and we will be able to apply these changes throughout the remaining labs even as we utilize the API in our Python environments!
+### 1.0 LLM Foundations
+Before we jump into exploring the capabilities of watsonx.ai, we first need to lay a foundation for how Large Language Modles (LLMs) work, and how we can tune the model and parameters to change their output. Gaining this understanding will make us more effective prompt engineers.
 
 <img src="../images/0.1.png" width="80%" alt="prompt" />
 
-When you open up your prompt lab, this is the view you will be shown.  Each time you enter a prompt, you will have “input tokens” and “generated tokens”. Tokens are to our model what words are to us — although they can vary. Depending on the circumstance, tokens can be sequences of characters or even words themselves. As you will see when you experiment with the prompt lab, tokens are not necessarily a 1:1 match with words in natural language, but it is an approximation you can use when trying to estimate!
+When you open up watsonx.ai, this is the view you will be shown.  The large central text area is called Prompt Lab, or Prompt Builder if you select the more advanced view by clicking the checkbox at top-left.  On the right-side are model parameters that you can use to select to optimize how the model responds to your prompt.  And on the bottom-left, is a summary of the number of tokens used by your prompt during execution.
 
-It is important to understand what tokens are so that you know how much information you are feeding the model when you give it a prompt, as well as how much information you expect it to generate for you. There is a max of 4096 tokens in the prompt builder, so keep in mind that the more expressive you are with your prompt instructions, the less room the model will have to respond back to you.
+### 1.1 Tokens
+
+Each time you enter a prompt, your “input tokens” and “generated tokens” will update. Tokens are an important concept to understand as they constrain the performance of your model plus determine the cost of using models.  As you will learn throughout the Labs, tokens are not a 1:1 match with words in natural language, but on average, one token is equal to 4 characters.  Before sending your prompt to the model, the prompt's text is Tokenized or broken into smaller subsets of characters better understood by a model.
+
+It is important to understand monitor your token usage to know how much information you are feeding into the model with each prompt, as well as how much text is generated for you. Depending on the model selected in Prompt Builder, you will see a max of 2048 or 4096 tokens.  Keep in mind that the more expressive you are with your prompt instructions, the less room the model has to respond back to you.
 
 ### 1.2 Everything is text completion
 
@@ -161,6 +155,9 @@ However, when text is still repetative even with a higher temperature, you can t
 
 This example shows the challenge: the bullet points are repetition that we want!  So penalizing repetitiveness might break your results too.
 
+### 2.5 Excellent 3rd party blog post on model parameters
+The descriptions above provide a good introduction to model parameters.  However you should [read this 3rd party post on model parameters](https://txt.cohere.com/llm-parameters-best-outputs-language-ai) which provides excellent additional examples of how model parameters work plus good visuals to help you better understand the concepts.  The better you understand model parameters, the less frustrated you will be and more empowered to tweak the models to perform as needed for your use case.
+
 # General advice
 
 ### 3.1 Try different models
@@ -180,7 +177,14 @@ If your prompt includes all the tips and best practices discussed here, yet you'
 
 For example, although we can get decent results for simple arithmetic, LLMs cannot generally do math well: [Researchers find that large language models struggle with math](https://venturebeat.com/business/researchers-find-that-large-language-models-struggle-with-math/)
 
-<p> </p>
+### 4.0 Balancing intelligence and security
+With great artificial intelligence comes higher security risks. Solutions like ChatGPT are Very Large language Models (VLLMs) with 175 billion parameters. They fine-tuned by the OpenAI team using an additional non-public Chat datasets plus a Reinforcement Learning Human Feedback (RLHF) dataset. ChatGPT is a chatbot-enabled LLM. 
+
+In watsonx.ai, we are interacting directly with smaller LLMs (3-20 billion parameters).  This is a wise choice from a security POV. Prompt injection is a major risk for enterprise uses of LLMs. In prompt injections, a hacker will create an intricate prompt in order to cause a LLM such as ChatGPT to ignore/bypass security protocols and reveal sensitive company information. Just imagine you're a hacker.  Which model would you choose to target for prompt injection hacking? OpenAI's ChatGPT with 175 billion parameters capable of thousands of tasks or a smaller, more-focused 3 billion parameter model highly tuned for a few isolated tasks?  Which has a larger attack surface for prompt re-engineering?
+
+The smaller, simpler models in watsonx.ai are more challenging for potential hackers. Using many small models rather than a single large one such as ChatGPT creates a wider distribution of sensitive entry points. Each small language model is much harder to manipulate due their limited functionality and high level of prompt engineering that was required to perform their primary tasks. They don’t have the wide range of functions such as ChatGPT.  As programmers know, putting all your resources into a single point of failure is unwise.  It's far better to decompose your solution for security, scalability and control.
+
+That's right.  For security, smaller is better. On top of security benefits, there are computational improvements with using smaller, lighter weight models as well. However we're getting ahead of ourselves.  Let's first interact more with watsonx.ai's LLMs to better understand and learn how to make them respond the way we need.
 
 # Further learning
 

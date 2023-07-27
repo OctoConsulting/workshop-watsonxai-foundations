@@ -29,7 +29,7 @@ Completing these technical hands-on labs will take roughly 12 hours plus another
 |  5 mins  | [Intro to Watson Code Assistant](https://ibm.box.com/s/lx4xbdjtc7p13yf950ou88bl8d5qbj3y) | 
 | 45 mins  | Lab 1: [Watson Code Assistant and Ansible Lightspeed](./self-guided-labs/products/lab-01-watson-code-assistant) | 
 
-### Apply Lessons Learned (CHOOSE ONE)
+### Apply Lessons Learned (CHOOSE ONE...OR MORE)
 You've made it to the end.  Almost. You will now apply the new skills that you've learned to the challenges below.  Select one of the challenges below and be creative.  These challenges are specifically open-ended.  Combine your own unique skills to extend the use case solutions provided in these challenges.    
 | **Time**        | **Topic** |
 |-----------------|-------------------|
@@ -37,3 +37,9 @@ You've made it to the end.  Almost. You will now apply the new skills that you'v
 | 2  hours  | Challenge 2: [Multi-Turn Model Interactions](./self-guided-labs/apply-lessons-learned/challenge-02) | 
 | 2  hours  | Challenge 3: [Visualize Model Conversation With Streamlit](./self-guided-labs/apply-lessons-learned/challenge-03) | 
 | 2+ hours  | Challenge 4: [RAG Search of SEC 10K Filings With Streamlit](./self-guided-labs/apply-lessons-learned/challenge-04) | 
+
+### Prior Challenge Completions
+Did you complete a Challenge and want to share your results.  Send your Github repo link to [apsteven@us.ibm.com](mailto:apsteven@us.ibm.com) and we'll add it to this list.    
+| **Topic**        | **Author** |
+|-----------------|-------------------|
+| [Super Fast RAG With File Upload](https://github.ibm.com/tyler-benson/pdf-langchain-watsonx) | Tyler Benson | 
