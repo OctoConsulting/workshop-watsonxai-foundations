@@ -1,5 +1,5 @@
 chromadb==0.4.2
-ibm-generative-ai==0.2.2
+ibm-watson-machine-learning==1.0.311
 ipywidgets==8.0.7
 jupyter==1.0.0
 langchain==0.0.236

@@ -3,10 +3,10 @@ import os
 import streamlit as st
 
 from chromadbWrapper import ChromaDBWrapper
+from langChainInterface import LangChainInterface
 from dotenv import load_dotenv
-from genai.model import Credentials
-from genai.schemas import GenerateParams, ModelType 
-from genai.extensions.langchain import LangChainInterface
+
+from ibm_watson_machine_learning.metanames import GenTextParamsMetaNames as GenParams
 
 PASSAGE_PLACEHOLDER = "{passages}"
 
@@ -18,21 +18,31 @@ class DocumentSearch:
         
     def load_model(self, model_parameters):
         # Load credentials 
-        load_dotenv(".env")
-        api_key = os.getenv("GENAI_KEY", None)
-        api_url = os.getenv("GENAI_API", None)
-        creds = Credentials(api_key, api_url)
+        load_dotenv()
+        api_key = os.getenv("API_KEY", None)
+        ibm_cloud_url = os.getenv("IBM_CLOUD_URL", None)
+        project_id = os.getenv("PROJECT_ID", None)
+        if api_key is None or ibm_cloud_url is None or project_id is None:
+            print("Ensure you copied the .env file that you created earlier into the same directory as this notebook")
+        else:
+            creds =  {
+                "url": ibm_cloud_url,
+                "apikey": api_key 
+    }
 
         # Create LLM
-        params = GenerateParams(decoding_method=model_parameters["decoding_method"],
-                                max_new_tokens=model_parameters["max_new_tokens"],
-                                min_new_tokens=model_parameters["min_new_tokens"],
-                                temperature=model_parameters["temperature"],
-                                top_k=model_parameters["top_k"],
-                                top_p=model_parameters["top_p"], 
-                                random_seed=model_parameters["random_seed"],
-                                repetition_penalty=model_parameters["repetition_penalty"])
-        self.llm = LangChainInterface(model=ModelType.FLAN_UL2, params=params, credentials=creds)
+        params = {
+            GenParams.DECODING_METHOD: model_parameters["decoding_method"],
+            GenParams.MIN_NEW_TOKENS: model_parameters["min_new_tokens"],
+            GenParams.MAX_NEW_TOKENS: model_parameters["max_new_tokens"],
+            GenParams.TEMPERATURE: model_parameters["temperature"],
+            GenParams.TOP_K: model_parameters["top_k"],
+            GenParams.TOP_P: model_parameters["top_p"],
+            GenParams.RANDOM_SEED: model_parameters["random_seed"],
+            GenParams.REPETITION_PENALTY: model_parameters["repetition_penalty"]
+        }
+        self.llm = LangChainInterface(model='google/flan-ul2', credentials=creds, params=params, project_id=project_id)
+
 
     def answer_question(self, parquet_passage_file, question, prompt_initial, passage_count_to_summarize):
         if passage_count_to_summarize > 0:
