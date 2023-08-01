@@ -7,9 +7,11 @@ So I'm guessing you've been hearing a bit about watsonx. Well...now you can buil
 3. Copy your .env file into this lab's base folder
 4. Run the app by running the command `streamlit run app.py`
 
+<img src="simple-streamlit-demo.png" width="600"/>
+
 # Other References 🔗
-<p>-<a href="https://workbench.res.ibm.com/docs/ibm-generative-ai">IBMGen Documentation</a>:documentation for the IBMGen library available through the tech preview UI.</p>
-<p>-<a href="https://github.com/IBM/ibm-generative-ai#langchain-extension">IBMGen Langchain Extension</a>:Langchain is a highly popular LLM library, it's used to structure prompt chains and llm workflows. In this tutorial we use the IBMGen langchain extension to generate responses.</p>
+<p>-<a href="https://workbench.res.ibm.com/docs/ibm-generative-ai">IBMGen Documentation</a>: documentation for the IBMGen library available through the tech preview UI.</p>
+<p>-<a href="https://github.com/IBM/ibm-generative-ai#langchain-extension">IBMGen Langchain Extension</a>: Langchain is a highly popular LLM library, it's used to structure prompt chains and llm workflows. In this tutorial we use the IBMGen langchain extension to generate responses.</p>
 
 👨🏾‍💻 Author: Nick Renotte
 
