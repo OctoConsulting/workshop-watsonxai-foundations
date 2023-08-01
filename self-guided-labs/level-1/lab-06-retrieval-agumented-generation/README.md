@@ -1,4 +1,4 @@
-# Lab 6: Retrieval Augment Generation (RAG) for Contextual Search
+# Lab 6.b: Retrieval Augment Generation (RAG) for Contextual Search
 
 ### Introduction
 In this lab, you will apply Retrieval Augment Generation (RAG) to retrieve then summarize text based on user queries.  Here is a high level view of a RAG implementation.  
