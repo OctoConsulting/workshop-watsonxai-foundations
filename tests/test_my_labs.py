@@ -28,4 +28,4 @@ def test_lab_07():
     time.sleep(5)
     process.terminate() 
     stdout, stderr = process.communicate()
-    assert process.returncode == 0, f"{script_path} - The lab notebook did not run with error \n {stderr.decode()}"
+    assert process.returncode == 0, f"{script_path} - The app did not run with error \n {stderr.decode()}"
