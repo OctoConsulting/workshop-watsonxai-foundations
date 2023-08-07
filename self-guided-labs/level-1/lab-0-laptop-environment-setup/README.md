@@ -9,12 +9,13 @@ Complete the steps in this guide to ensure your desktop environment has all the 
 - [3: Create virtual Python environment (and install required libraries)](#virtual-environment)
 - [4. Run Jupyter Notebook and Validate All Libraries Installed](#jupyter-notebook)
 - [5. Install Visual Studio Code (VS Code)](#vs-code)
-- [6: Access watsonx.ai Workbench](#access-watsonxai-workbench)
-- [7: Security and .env Files](#environment-files)
-- [8: .gitignore files](#gitignore)
+- [6: Obtain your IBM Cloud API key](#obtain-api-key)
+- [7: Create a watsonx.ai Project](#create-project)
+- [8: Security and .env Files](#environment-files)
+- [9: .gitignore files](#gitignore)
 
 ### 1: Connect to watsonx.ai <a id="connect-to-watsonxai"></a>
-Try connecting to the [watsonx.ai Workbench](https://workbench.res.ibm.com/).  If you don't have access then contact the workshop leads for access.
+Try connecting to [watsonx.ai](https://dataplatform.cloud.ibm.com/wx/).
 
 ### 2: Clone the Workshop's Github repo <a id="clone-watsonxai-repo"></a>
 If you're a Github pro then you can directly clone this wastonx.ai workshop repo.  Otherwise we recommend downloading and installing the [Github Desktop](https://desktop.github.com/) and then cloning this watsonx.ai workshop repo. Here are instructions on [how to clone a repository using Github Desktop](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop).
@@ -24,7 +25,7 @@ Python applications import multiple libraries, and oftentimes, conflicts can occ
 
 To ensure all required Python libraries are installced, [complete these steps to create your virtual Python environment.](create-virtual-python-environment.md)
 
-**NOTE:** Don't skip setting up your Python environment as the documented steps ensure you have installed IBM GenAI Python library, Jupyter Notebook, ChromaDB, Hugging Face and all other required libraries.
+**NOTE:** Don't skip setting up your Python environment as the documented steps ensure you have installed Watson Machine Learning Python SDK, Jupyter Notebook, ChromaDB, Hugging Face and all other required libraries.
 
 ### 4: Run Jupyter Notebook and Validate All Libraries Installed<a id="jupyter-notebook"></a>
 You will be executing several Jupyter notebooks during this workshop.  The Jupyter Notebook executable was installed as part of your Virtual Environment setup in [Step #1](create-virtual-python-environment.md).   You will now ensure that you can run Jupyter Notebooks plus validate that all required Python libraries were installed.
@@ -44,17 +45,24 @@ Most development and data science teams within IBM (and outside) have selected V
 
 Go here to [install VS Code and configure it for your Python environment](vs-code.md)
 
-### 6: Access watsonx.ai Workbench <a id="access-watsonxai-workbench"></a>
-Log in to the [watsonx.ai Workbench](https://workbench.res.ibm.com/) to retrieve your API Key from the right-side of the home screen.  Save this key as we will be using it during the next step.  
+### 6: Obtain your IBM Cloud API key <a id="obtain-api-key"></a>
+You will need your IBM Cloud API key to authenticate the Watson Machine Learning Python SDK client and interact with WatsonX foundation models. **Note that this is the conventional IBM Cloud API key, which you may have already created in the past.** Use your existing API key or follow [these instructions](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key) to generate a new one. You will need this API key for [step 8](#environment-files).
 
-<p align="center">
-  <img src="./images/watsonxai-api-key.png" width="600"/>
+### 7: Create a watsonx.ai Project <a id="create-project"></a>
+The Watson Machine Learning Python SDK requires a project ID to interact with watsonx.ai LLMs. Follow the directions below to create a project and retrieve its associated ID.
+1. Visit the [watsonx.ai Projects page](https://dataplatform.cloud.ibm.com/projects/?context=wx) and click "Create an empty project". Give your project a valid name, and leave the remaining default options. Click "Create" and verify that your project was successfully created.
+2. Once your new project loads, select the "Manage" tab from the Project's main page. You will see your Project ID under the "General" tab as shown below. You will need this project ID for [step 8](#environment-files).
+
+<p align="left">
+  <img src="images/environment-get-project-id.png" width="500"/>
 </p>
 
-### 7: Security and .env Files<a id="environment-files"></a>
+### 8: Security and .env Files<a id="environment-files"></a>
 A guaranteed way to get contacted by IBM's Github security team is to check-in code that contains an access credential for an IBM Cloud service.  To avoid this, store credentials in a .env file, then ensure this .env **is not checked into Github.**  Python provides support for .env files through a library called dotenv that you will encounter during some lessons in this Boot Camp.
 
-Download this [env file](./env), open it in a text editor and add your watsonx.ai API key in the GENAI_KEY field. This is also described on the watsonx.ai page describing the [GenAI python library](https://workbench.res.ibm.com/docs/ibm-generative-ai).
+Download this [env file](./env), open it in a text editor and 
+1. add your IBM Cloud API key from [step 6](#obtain-api-key) in the API_KEY field
+2. add your project ID from [step 7](#create-project) in the PROJECT_ID field
 
 Add a period to the downloaded "env" file to it is ".env".  You may get a warning that this will convert this to a hidden file so [learn how to view these hidden files on a Mac](https://www.macworld.com/article/671158/how-to-show-hidden-files-on-a-mac.html) or [how to view hidden files on Windows](https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5).
 
@@ -68,5 +76,5 @@ To check that the file was changed to .env, type the following command:
 ls -la 
 ```
 
-### 8: .gitignore Files <a id="gitignore"></a>
+### 9: .gitignore Files <a id="gitignore"></a>
 Whenever checking code into a Github repo, use .gitignore to exclude files from being checked-in.  If you don't know how to do this, [learn how to add your .env to .gitignore](https://salferrarello.com/add-env-to-gitignore/).
