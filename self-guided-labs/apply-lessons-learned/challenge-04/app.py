@@ -3,7 +3,6 @@ import json
 import streamlit as st
 import pandas as pd
 
-from annotated_text import annotated_text
 from documentSearch import DocumentSearch
 from os import listdir
 from os.path import isfile, join
