@@ -1,11 +1,11 @@
-import chromadb
 import os
+from typing import Any, Iterable, List, Optional
 
+import chromadb
 import pandas as pd
-
 from chromadb.api.types import EmbeddingFunction
 from sentence_transformers import SentenceTransformer
-from typing import Optional, Any, Iterable, List
+
 
 class MiniLML6V2EmbeddingFunction(EmbeddingFunction):
     MODEL = SentenceTransformer('all-MiniLM-L6-v2')

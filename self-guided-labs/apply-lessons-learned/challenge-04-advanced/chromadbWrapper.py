@@ -1,11 +1,11 @@
-import chromadb
 import os
+from typing import Any, Iterable, List, Optional
 
+import chromadb
 import pandas as pd
-
 from chromadb.api.types import EmbeddingFunction
 from sentence_transformers import SentenceTransformer
-from typing import Optional, Any, Iterable, List
+
 
 class MiniLML6V2EmbeddingFunction(EmbeddingFunction):
     MODEL = SentenceTransformer('all-MiniLM-L6-v2')
@@ -23,11 +23,7 @@ class ChromaDBWrapper:
         self.sec_10k_passsages = self.sec_10k_df["text"].values.tolist()
         self.sec_10k_passsage_ids = self.sec_10k_df["passage_id"].values.tolist()
 
-        self._client_settings = chromadb.config.Settings(
-            chroma_db_impl="duckdb+parquet",
-            persist_directory=os.path.dirname(parquet_passage_file)
-        )
-        self._client = chromadb.Client(self._client_settings)
+        self._client = chromadb.PersistentClient(path=os.path.dirname(parquet_passage_file))
         self._collection = self._client.get_or_create_collection(name = f"sec_10k_minilm6v2", 
                                                                  embedding_function = MiniLML6V2EmbeddingFunction())
         self.initialize_db()
@@ -42,7 +38,6 @@ class ChromaDBWrapper:
                         zip(self.sec_10k_passsages, self.sec_10k_passsage_ids)],  # filter on these!
                 ids=self.sec_10k_passsage_ids,  # unique for each doc
             )
-            self.persist()
 
     def upsert_texts(
         self,
@@ -58,9 +53,6 @@ class ChromaDBWrapper:
 
     def is_empty(self):
         return self._collection.count()==0
-
-    def persist(self):
-        self._client.persist()
 
     # return: the closest result to the given question
     def query(self, query_texts:str, n_results:int=5):
