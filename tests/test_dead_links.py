@@ -5,7 +5,6 @@ from urllib.parse import urlparse
 ### UTIL #####
 
 
-
 def get_urls_from_text(txt):
     endpoints = {"https://us-south.ml.cloud.ibm.com"}
     url_regex = r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
