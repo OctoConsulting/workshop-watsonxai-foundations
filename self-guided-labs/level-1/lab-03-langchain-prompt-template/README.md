@@ -10,6 +10,6 @@ In this lab, we will apply our new knowledge to a real-world use case as we cont
 </p>
 
 ### Getting Started
-Let's get started and unlock the full potential of Prompt Patterns for generating personalized recommendations at XYZ Retail! Execute the [Intro to Using langChain Python Library notebook](./code/langchain-prompt-template.ipynb).
+Let's get started and unlock the full potential of Prompt Patterns for generating personalized recommendations at XYZ Retail! Execute the [Intro to Using langChain Python Library notebook](./langchain-prompt-template.ipynb).
 
 **Note:** Be sure to have cloned this entire repo or you won't have the images and data required to execute these notebooks.
