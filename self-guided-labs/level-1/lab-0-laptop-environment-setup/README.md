@@ -15,7 +15,7 @@ Complete the steps in this guide to ensure your desktop environment has all the 
 - [9: .gitignore files](#gitignore)
 
 ### 1: Connect to watsonx.ai <a id="connect-to-watsonxai"></a>
-Try connecting to [watsonx.ai](https://dataplatform.cloud.ibm.com/wx/).
+Try connecting to [watsonx.ai](https://dataplatform.cloud.ibm.com/wx/). **Importantly**, you will primarily visit the watsonx.ai UI for labs that require the Prompt Lab, which provides a more interactive user interface. The majority of the labs involve interacting with watsonx.ai *programmatically* via the new [Foundation Models module](https://ibm.github.io/watson-machine-learning-sdk/foundation_models.html) of the [Watson Machine Learning Python SDK](https://pypi.org/project/ibm-watson-machine-learning/). While this library works from within the watsonx.ai UI, this workshop was designed such that you will run Python code from VS Code on your local machine, which still submits inference requests to the GA instance of watsonx.ai.
 
 ### 2: Clone the Workshop's Github repo <a id="clone-watsonxai-repo"></a>
 If you're a Github pro then you can directly clone this wastonx.ai workshop repo.  Otherwise we recommend downloading and installing the [Github Desktop](https://desktop.github.com/) and then cloning this watsonx.ai workshop repo. Here are instructions on [how to clone a repository using Github Desktop](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop).
@@ -46,10 +46,15 @@ Most development and data science teams within IBM (and outside) have selected V
 Go here to [install VS Code and configure it for your Python environment](vs-code.md)
 
 ### 6: Obtain your IBM Cloud API key <a id="obtain-api-key"></a>
-You will need your IBM Cloud API key to authenticate the Watson Machine Learning Python SDK client and interact with WatsonX foundation models. **Note that this is the conventional IBM Cloud API key, which you may have already created in the past.** Use your existing API key or follow [these instructions](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key) to generate a new one. You will need this API key for [step 8](#environment-files).
+You will need your IBM Cloud API key to authenticate the Watson Machine Learning Python SDK client and interact with watsonx.ai foundation models. **Note that this is the conventional IBM Cloud API key, which you may have already created in the past.** Use your existing API key or follow [these instructions](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key) to generate a new one. You will need this API key for [step 8](#environment-files).
 
 ### 7: Create a watsonx.ai Project <a id="create-project"></a>
-The Watson Machine Learning Python SDK requires a project ID to interact with watsonx.ai LLMs. Follow the directions below to create a project and retrieve its associated ID.
+The Watson Machine Learning Python SDK requires a project ID to interact with watsonx.ai LLMs. How you obtain this project ID depends on whether you are part of an instructor-led workshop, or are taking the workshop on your own. See below for your specific scenario:
+
+**If you are part of an instructor-led workshop:**
+1. Your instructor will provide you with the project ID. You will need this project ID for [step 8](#environment-files).
+
+**If you are taking this workshop on your own:**
 1. Visit the [watsonx.ai Projects page](https://dataplatform.cloud.ibm.com/projects/?context=wx) and click "Create an empty project". Give your project a valid name, and leave the remaining default options. Click "Create" and verify that your project was successfully created.
 2. Once your new project loads, select the "Manage" tab from the Project's main page. You will see your Project ID under the "General" tab as shown below. You will need this project ID for [step 8](#environment-files).
 
