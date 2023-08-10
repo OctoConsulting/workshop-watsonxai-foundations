@@ -29,7 +29,7 @@ The Watson Machine Learning Python SDK requires a project ID to interact with wa
 2. Once your new project loads, select the "Manage" tab from the Project's main page. You will see your Project ID under the "General" tab as shown below. You will need this project ID for [step 8](#environment-files).
 
 <p align="left">
-  <img src="images/environment-get-project-id.png" width="800"/>
+  <img src="images/environment-get-project-id.png" width="1200"/>
 </p>
 
 ### 3: Associate your project with a WML instance <a id="wml-instance"></a>
@@ -46,11 +46,11 @@ A watsonx.ai project must *always* be associated with an instance of Watson Mach
 5. Choose a WML instance and select `Associate`
 
 <p align="left">
-  <img src="images/wml-instance-1.png" width="800"/>
+  <img src="images/wml-instance-1.png" width="1200"/>
 </p>
 
 <p align="left">
-  <img src="images/wml-instance-2.png" width="800"/>
+  <img src="images/wml-instance-2.png" width="1200"/>
 </p>
 
 ### 4: Obtain your IBM Cloud API key <a id="obtain-api-key"></a>
