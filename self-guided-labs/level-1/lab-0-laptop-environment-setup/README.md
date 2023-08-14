@@ -62,25 +62,25 @@ If you're a Github pro then you can directly clone this wastonx.ai workshop repo
 ### 6: Create Virtual Python Environment and Install Jupyter and Required Libraries <a id="virtual-environment"></a>
 Python applications import multiple libraries, and oftentimes, conflicts can occur between different versions of required libraries.  However, your app may require a specific library version due to a bug fix.  The solution is to create a virtual environment, a self-contained suite of libraries for a specific Python installation.
 
-To ensure all required Python libraries are installced, [complete these steps to create your virtual Python environment.](create-virtual-python-environment.md)
+To ensure all required Python libraries are installed, [complete these steps to create your virtual Python environment.](create-virtual-python-environment.md)
 
-**NOTE:** Don't skip setting up your Python environment as the documented steps ensure you have installed Watson Machine Learning Python SDK, Jupyter Notebook, ChromaDB, Hugging Face and all other required libraries.
+**NOTE:** Don't skip setting up your Python environment as the documented steps ensure you have installed the Watson Machine Learning Python SDK, Jupyter Notebook, ChromaDB, Hugging Face and all other required libraries.
 
 ### 7: Run Jupyter Notebook and Validate All Libraries Installed<a id="jupyter-notebook"></a>
-You will be executing several Jupyter notebooks during this workshop.  The Jupyter Notebook executable was installed as part of your Virtual Environment setup in [Step #1](create-virtual-python-environment.md).   You will now ensure that you can run Jupyter Notebooks plus validate that all required Python libraries were installed.
+You will be executing several Jupyter notebooks during this workshop.  The Jupyter Notebook executable was installed as part of your Virtual Environment setup in [Step #1](create-virtual-python-environment.md). You will now ensure that you can run Jupyter Notebooks plus validate that all required Python libraries were installed.
 
-Download this [environment test notebook](./environment-test.ipynb) or use the one that your cloned version of this Github repository.  Use the "cd" command to change to the directory holding those notebooks when ready and launch Jupyter as below.
+Download this [environment test notebook](./environment-test.ipynb) or use the one in your cloned version of this Github repository. Use the "cd" command to change to the directory holding those notebooks when ready and launch Jupyter as below.
 
 ```
-<ensure your python environment is active>
+<ensure your python virtual environment is active>
 cd <full path to folder containing the environment test notebook>
 jupyter notebook
 ```
 
-Jupyter shoud automatically open a browser window for you.  If not, navigate to http://localhost:8888/notebooks/ to run the notebook.
+Jupyter should automatically open a browser window for you. If not, navigate to http://localhost:8888/notebooks/ to run the notebook.
 
 ### 8: Install Visual Studio Code (VS Code) <a id="vs-code"></a>
-Most development and data science teams within IBM (and outside) have selected VS Code as their default coding environment.  You can choose to use an alternate IDE for this Boot Camp (like PyCharm or Eclipse), however the Boot Camp coaches will be less skilled at supporting those IDEs.  We recommend installing VS Code so you are on a common platform with most of your IBM colleagues.
+Most development and data science teams within IBM (and outside) have selected VS Code as their default coding environment. You can choose to use an alternate IDE for this Boot Camp (like PyCharm or Eclipse), however the Boot Camp coaches will be less skilled at supporting those IDEs. We recommend installing VS Code so you are on a common platform with most of your IBM colleagues.
 
 Go here to [install VS Code and configure it for your Python environment](vs-code.md)
 
