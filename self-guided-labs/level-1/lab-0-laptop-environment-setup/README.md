@@ -57,17 +57,17 @@ A watsonx.ai project must *always* be associated with an instance of Watson Mach
 You will need your IBM Cloud API key to authenticate the Watson Machine Learning Python SDK client and interact with watsonx.ai foundation models. **Note that this is the conventional IBM Cloud API key, which you may have already created in the past.** Use your existing API key or follow [these instructions](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key) to generate a new one. You will need this API key for [step 8](#environment-files).
 
 ### 5: Clone the Workshop's Github repo <a id="clone-watsonxai-repo"></a>
-If you're a Github pro then you can directly clone this wastonx.ai workshop repo.  Otherwise we recommend downloading and installing the [Github Desktop](https://desktop.github.com/) and then cloning this watsonx.ai workshop repo. Here are instructions on [how to clone a repository using Github Desktop](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop).
+If you're a Github pro then you can directly clone this wastonx.ai workshop repo. Otherwise we recommend downloading and installing the [Github Desktop](https://desktop.github.com/) and then cloning this watsonx.ai workshop repo. Here are instructions on [how to clone a repository using Github Desktop](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop).
 
 ### 6: Create Virtual Python Environment and Install Jupyter and Required Libraries <a id="virtual-environment"></a>
-Python applications import multiple libraries, and oftentimes, conflicts can occur between different versions of required libraries.  However, your app may require a specific library version due to a bug fix.  The solution is to create a virtual environment, a self-contained suite of libraries for a specific Python installation.
+Python applications import multiple libraries, and oftentimes, conflicts can occur between different versions of required libraries. However, your app may require a specific library version due to a bug fix. The solution is to create a virtual environment, a self-contained suite of libraries for a specific Python installation.
 
 To ensure all required Python libraries are installed, [complete these steps to create your virtual Python environment.](create-virtual-python-environment.md)
 
 **NOTE:** Don't skip setting up your Python environment as the documented steps ensure you have installed the Watson Machine Learning Python SDK, Jupyter Notebook, ChromaDB, Hugging Face and all other required libraries.
 
 ### 7: Run Jupyter Notebook and Validate All Libraries Installed<a id="jupyter-notebook"></a>
-You will be executing several Jupyter notebooks during this workshop.  The Jupyter Notebook executable was installed as part of your Virtual Environment setup in [Step #1](create-virtual-python-environment.md). You will now ensure that you can run Jupyter Notebooks plus validate that all required Python libraries were installed.
+You will be executing several Jupyter notebooks during this workshop. The Jupyter Notebook executable was installed as part of your Virtual Environment setup in [Step #1](create-virtual-python-environment.md). You will now ensure that you can run Jupyter Notebooks plus validate that all required Python libraries were installed.
 
 Download this [environment test notebook](./environment-test.ipynb) or use the one in your cloned version of this Github repository. Use the "cd" command to change to the directory holding those notebooks when ready and launch Jupyter as below.
 
@@ -85,13 +85,13 @@ Most development and data science teams within IBM (and outside) have selected V
 Go here to [install VS Code and configure it for your Python environment](vs-code.md)
 
 ### 9: Security and .env Files<a id="environment-files"></a>
-A guaranteed way to get contacted by IBM's Github security team is to check-in code that contains an access credential for an IBM Cloud service.  To avoid this, store credentials in a .env file, then ensure this .env **is not checked into Github.**  Python provides support for .env files through a library called dotenv that you will encounter during some lessons in this Boot Camp.
+A guaranteed way to get contacted by IBM's Github security team is to check-in code that contains an access credential for an IBM Cloud service. To avoid this, store credentials in a .env file, then ensure this .env **is not checked into Github.** Python provides support for .env files through a library called dotenv that you will encounter during some lessons in this Boot Camp.
 
 Download this [env file](./env), open it in a text editor and 
 1. add your IBM Cloud API key from [step 6](#obtain-api-key) in the API_KEY field
 2. add your project ID from [step 7](#create-project) in the PROJECT_ID field
 
-Add a period to the downloaded "env" file to it is ".env".  You may get a warning that this will convert this to a hidden file so [learn how to view these hidden files on a Mac](https://www.macworld.com/article/671158/how-to-show-hidden-files-on-a-mac.html) or [how to view hidden files on Windows](https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5).
+Add a period to the downloaded "env" file to it is ".env". You may get a warning that this will convert this to a hidden file so [learn how to view these hidden files on a Mac](https://www.macworld.com/article/671158/how-to-show-hidden-files-on-a-mac.html) or [how to view hidden files on Windows](https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5).
 
 If you are still having trouble renaming the “env” file to “.env”, type the following commands in your terminal:
 ```
@@ -104,4 +104,4 @@ ls -la
 ```
 
 ### 10: .gitignore Files <a id="gitignore"></a>
-Whenever checking code into a Github repo, use .gitignore to exclude files from being checked-in.  If you don't know how to do this, [learn how to add your .env to .gitignore](https://salferrarello.com/add-env-to-gitignore/).
+Whenever checking code into a Github repo, use .gitignore to exclude files from being checked-in. If you don't know how to do this, [learn how to add your .env to .gitignore](https://salferrarello.com/add-env-to-gitignore/).
