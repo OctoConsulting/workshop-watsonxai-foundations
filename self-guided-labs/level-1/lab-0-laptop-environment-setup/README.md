@@ -10,8 +10,8 @@ Complete the steps in this guide to ensure your desktop environment has all the 
 - [4: Obtain your IBM Cloud API key](#obtain-api-key)
 - [5: Clone the Workshop's Github repo](#clone-watsonxai-repo)
 - [6: Create virtual Python environment (and install required libraries)](#virtual-environment)
-- [7. Run Jupyter Notebook and Validate All Libraries Installed](#jupyter-notebook)
-- [8. Install Visual Studio Code (VS Code)](#vs-code)
+- [7: Choose your Jupyter Notebook Runtime](#jupyter-runtime)
+- [8. Validate All Libraries Installed](#validate-libraries)
 - [9: Security and .env Files](#environment-files)
 - [10: .gitignore files](#gitignore)
 
@@ -66,23 +66,32 @@ To ensure all required Python libraries are installed, [complete these steps to 
 
 **NOTE:** Don't skip setting up your Python environment as the documented steps ensure you have installed the Watson Machine Learning Python SDK, Jupyter Notebook, ChromaDB, Hugging Face and all other required libraries.
 
-### 7: Run Jupyter Notebook and Validate All Libraries Installed<a id="jupyter-notebook"></a>
-You will be executing several Jupyter notebooks during this workshop. The Jupyter Notebook executable was installed as part of your Virtual Environment setup in [Step #1](create-virtual-python-environment.md). You will now ensure that you can run Jupyter Notebooks plus validate that all required Python libraries were installed.
+### 7: Choose your Jupyter Notebook Runtime<a id="jupyter-runtime"></a>
+In order to use Jupyter notebooks, there are a few choices.
 
-Download this [environment test notebook](./environment-test.ipynb) or use the one in your cloned version of this Github repository. Use the "cd" command to change to the directory holding those notebooks when ready and launch Jupyter as below.
+A Jupyter server can be installed and run locally very easily. Jupyter notebooks can also be run in VS Code using a plugin. It's up to you which you prefer. If in doubt, VS Code is a simple solution with which many data scientists are familiar.
+
+#### 7a: Run Jupyter Server and Validate All Libraries Installed<a id="jupyter-notebook"></a>
+You will be executing several Jupyter notebooks during this workshop. The Jupyter Notebook executable was installed as part of your Virtual Environment setup in [Step #1](create-virtual-python-environment.md).
+
+Before executing the command below, choose the root directory for the server. When the server starts, your current working directory will become the server's root directory. In its user interface, you won't be able to access files above that directory. If you would like to focus only on these labs, choose the root of the repo directory. Otherwise, you could choose something higher like the directory in which you store all of your repos or your Documents folder, for instance.
 
 ```
-<ensure your python virtual environment is active>
-cd <full path to folder containing the environment test notebook>
+# ensure your python virtual environment is active
+cd <directory chosen as server's root directory>
 jupyter notebook
 ```
 
 Jupyter should automatically open a browser window for you. If not, navigate to http://localhost:8888/notebooks/ to run the notebook.
 
-### 8: Install Visual Studio Code (VS Code) <a id="vs-code"></a>
+#### 7b: Install Visual Studio Code (VS Code) <a id="vs-code"></a>
 Most development and data science teams within IBM (and outside) have selected VS Code as their default coding environment. You can choose to use an alternate IDE for this Boot Camp (like PyCharm or Eclipse), however the Boot Camp coaches will be less skilled at supporting those IDEs. We recommend installing VS Code so you are on a common platform with most of your IBM colleagues.
 
 Go here to [install VS Code and configure it for your Python environment](vs-code.md)
+
+### 8: Validate All Libraries Installed <a id="validate-libraries"></a>
+
+Download this [environment test notebook](./environment-test.ipynb) or use the one in your cloned version of this Github repository. Access the notebook in your chosen Jupyter runtime and execute it entirely. If no errors appear, your dependencies have been installed!
 
 ### 9: Security and .env Files<a id="environment-files"></a>
 A guaranteed way to get contacted by IBM's Github security team is to check-in code that contains an access credential for an IBM Cloud service. To avoid this, store credentials in a .env file, then ensure this .env **is not checked into Github.** Python provides support for .env files through a library called dotenv that you will encounter during some lessons in this Boot Camp.
