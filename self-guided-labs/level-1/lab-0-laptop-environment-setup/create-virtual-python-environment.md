@@ -31,6 +31,8 @@ You can validate that your environment is active by looking at the start of the 
   <img src="images/environment-activated-python.png" width="500"/>
 </p>
 
+Note: if you are a Windows user, instead of running the command `source genai/bin/activate`, follow the steps in [Setting-up-Python-Virtual-Environment-in-Windows.docx](./Setting-up-Python-Virtual-Environment-in-Windows.docx). 
+
 #### Dectivate your Python virtual environment
 If you need to change to a different environment, you can deactivate your current environment using the command below:
 ```
