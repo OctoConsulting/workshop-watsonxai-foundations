@@ -4,6 +4,7 @@
 Complete the steps in this guide to ensure your desktop environment has all the required tools and libraries installed.
 
 ## Steps to complete
+- [0: (For Mac Users Only) Install/Update Xcode](#install-update-xcode)
 - [1: Connect to watsonx.ai](#connect-to-watsonxai)
 - [2: Create a watsonx.ai Project](#create-project)
 - [3: Associate Your Project with a WML Instance](#wml-instance)
@@ -14,6 +15,15 @@ Complete the steps in this guide to ensure your desktop environment has all the 
 - [8. Validate All Libraries Installed](#validate-libraries)
 - [9: Security and .env Files](#environment-files)
 - [10: .gitignore files](#gitignore)
+
+### 0: (For Mac Users Only) Install/Update Xcode <a id="install-update-xcode"></a>
+Setting up your environment via the steps below can reveal various distinct problems, several of which will be the result of not having your Mac properly setup for development. Xcode is a collection of developer tools that enable building applications for Apple's various operating systems (MacOS, iOS, etc) but also comes with some command line tools and a C compiler. The later are necessary to install some of the dependencies for this training.
+
+❗ Updating Xcode takes several hours! Do this first, and go make some coffee... ❗
+
+Access the App Store (Not the Mac@IBM App Store!) and search for "xcode." Click the "Get" button or the Cloud icon to install the latest version.
+
+![images/xcode.png](images/xcode.png)
 
 ### 1: Connect to watsonx.ai <a id="connect-to-watsonxai"></a>
 Try connecting to [watsonx.ai](https://dataplatform.cloud.ibm.com/wx/). **Importantly**, you will primarily visit the watsonx.ai UI for labs that require the Prompt Lab, which provides a more interactive user interface. The majority of the labs involve interacting with watsonx.ai *programmatically* via the new [Foundation Models module](https://ibm.github.io/watson-machine-learning-sdk/foundation_models.html) of the [Watson Machine Learning Python SDK](https://pypi.org/project/ibm-watson-machine-learning/). While this library works from within the watsonx.ai UI, this workshop was designed such that you will run Python code from VS Code on your local machine, which still submits inference requests to the GA instance of watsonx.ai.
