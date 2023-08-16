@@ -31,7 +31,21 @@ You can validate that your environment is active by looking at the start of the 
   <img src="images/environment-activated-python.png" width="500"/>
 </p>
 
-Note: if you are a Windows user, instead of running the command `source genai/bin/activate`, follow the steps in [Setting-up-Python-Virtual-Environment-in-Windows.docx](./Setting-up-Python-Virtual-Environment-in-Windows.docx). 
+Note: If you are a Windows user, instead of running the command `source genai/bin/activate`, follow the steps in [Setting-up-Python-Virtual-Environment-in-Windows.docx](./Setting-up-Python-Virtual-Environment-in-Windows.docx). 
+
+Note: If you do not have an M1 chip, you might get an error along the lines of:
+```
+× Building wheel for chroma-hnswlib (pyproject.toml) did not run successfully.
+```
+If so, try one of these two solutions, replacing `python -m pip install -r requirements_venv.txt` with
+```
+export HNSWLIB_NO_NATIVE=1
+python -m pip install -r requirements_venv.txt
+```
+or
+```
+ARCHFLAGS="-arch x86_64" python -m pip install -r requirements_venv.txt
+```
 
 #### Dectivate your Python virtual environment
 If you need to change to a different environment, you can deactivate your current environment using the command below:
