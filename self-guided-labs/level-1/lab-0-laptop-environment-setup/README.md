@@ -4,17 +4,22 @@
 Complete the steps in this guide to ensure your desktop environment has all the required tools and libraries installed.
 
 ## Steps to complete
-- [0: (For Mac Users Only) Install/Update Xcode](#install-update-xcode)
-- [1: Connect to watsonx.ai](#connect-to-watsonxai)
-- [2: Create a watsonx.ai Project](#create-project)
-- [3: Associate Your Project with a WML Instance](#wml-instance)
-- [4: Obtain your IBM Cloud API key](#obtain-api-key)
-- [5: Clone the Workshop's Github repo](#clone-watsonxai-repo)
-- [6: Create virtual Python environment (and install required libraries)](#virtual-environment)
-- [7: Choose your Jupyter Notebook Runtime](#jupyter-runtime)
-- [8. Validate All Libraries Installed](#validate-libraries)
-- [9: Security and .env Files](#environment-files)
-- [10: .gitignore files](#gitignore)
+- [Desktop Environment Setup](#desktop-environment-setup)
+  - [Introduction](#introduction)
+  - [Steps to complete](#steps-to-complete)
+    - [0: (For Mac Users Only) Install/Update Xcode ](#0-for-mac-users-only-installupdate-xcode-)
+    - [1: Connect to watsonx.ai ](#1-connect-to-watsonxai-)
+    - [2: Create a watsonx.ai Project ](#2-create-a-watsonxai-project-)
+    - [3: Associate your project with a WML instance ](#3-associate-your-project-with-a-wml-instance-)
+    - [4: Obtain your IBM Cloud API key ](#4-obtain-your-ibm-cloud-api-key-)
+    - [5: Clone the Workshop's Github repo ](#5-clone-the-workshops-github-repo-)
+    - [6: Create Virtual Python Environment and Install Jupyter and Required Libraries ](#6-create-virtual-python-environment-and-install-jupyter-and-required-libraries-)
+    - [7: Choose your Jupyter Notebook Runtime](#7-choose-your-jupyter-notebook-runtime)
+      - [7a: Run Jupyter Server and Validate All Libraries Installed](#7a-run-jupyter-server-and-validate-all-libraries-installed)
+      - [7b: Install Visual Studio Code (VS Code) ](#7b-install-visual-studio-code-vs-code-)
+    - [8: Validate All Libraries Installed ](#8-validate-all-libraries-installed-)
+    - [9: Security and .env Files](#9-security-and-env-files)
+    - [10: .gitignore Files ](#10-gitignore-files-)
 
 ### 0: (For Mac Users Only) Install/Update Xcode <a id="install-update-xcode"></a>
 Setting up your environment via the steps below can reveal various distinct problems, several of which will be the result of not having your Mac properly setup for development. Xcode is a collection of developer tools that enable building applications for Apple's various operating systems (MacOS, iOS, etc) but also comes with some command line tools and a C compiler. The later are necessary to install some of the dependencies for this training.
@@ -64,7 +69,7 @@ A watsonx.ai project must *always* be associated with an instance of Watson Mach
 </p>
 
 ### 4: Obtain your IBM Cloud API key <a id="obtain-api-key"></a>
-You will need your IBM Cloud API key to authenticate the Watson Machine Learning Python SDK client and interact with watsonx.ai foundation models. **Note that this is the conventional IBM Cloud API key, which you may have already created in the past.** Use your existing API key or follow [these instructions](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key) to generate a new one. You will need this API key for [step 8](#environment-files).
+You will need your IBM Cloud API key to authenticate the Watson Machine Learning Python SDK client and interact with watsonx.ai foundation models. **Note that this is the conventional IBM Cloud API key, which you may have already created in the past.** Use your existing API key or follow [these instructions](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key) to generate a new one in the [IBM cloud console](https://cloud.ibm.com). You will need this API key for [step 8](#environment-files).
 
 ### 5: Clone the Workshop's Github repo <a id="clone-watsonxai-repo"></a>
 If you're a Github pro then you can directly clone this wastonx.ai workshop repo. Otherwise we recommend downloading and installing the [Github Desktop](https://desktop.github.com/) and then cloning this watsonx.ai workshop repo. Here are instructions on [how to clone a repository using Github Desktop](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-a-repository-from-github-to-github-desktop).
@@ -82,7 +87,7 @@ In order to use Jupyter notebooks, there are a few choices.
 A Jupyter server can be installed and run locally very easily. Jupyter notebooks can also be run in VS Code using a plugin. It's up to you which you prefer. If in doubt, VS Code is a simple solution with which many data scientists are familiar.
 
 #### 7a: Run Jupyter Server and Validate All Libraries Installed<a id="jupyter-notebook"></a>
-You will be executing several Jupyter notebooks during this workshop. The Jupyter Notebook executable was installed as part of your Virtual Environment setup in [Step #1](create-virtual-python-environment.md).
+You will be executing several Jupyter notebooks during this workshop. The Jupyter Notebook executable was installed as part of your Virtual Environment setup in [Step #6](create-virtual-python-environment.md).
 
 Before executing the command below, choose the root directory for the server. When the server starts, your current working directory will become the server's root directory. In its user interface, you won't be able to access files above that directory. If you would like to focus only on these labs, choose the root of the repo directory. Otherwise, you could choose something higher like the directory in which you store all of your repos or your Documents folder, for instance.
 
@@ -107,8 +112,8 @@ Download this [environment test notebook](./environment-test.ipynb) or use the o
 A guaranteed way to get contacted by IBM's Github security team is to check-in code that contains an access credential for an IBM Cloud service. To avoid this, store credentials in a .env file, then ensure this .env **is not checked into Github.** Python provides support for .env files through a library called dotenv that you will encounter during some lessons in this Boot Camp.
 
 Download this [env file](./env), open it in a text editor and 
-1. add your IBM Cloud API key from [step 6](#obtain-api-key) in the API_KEY field
-2. add your project ID from [step 7](#create-project) in the PROJECT_ID field
+1. add your IBM Cloud API key from [step 4](#obtain-api-key) in the API_KEY field
+2. add your project ID from [step 2](#create-project) in the PROJECT_ID field
 
 Add a period to the downloaded "env" file to it is ".env". You may get a warning that this will convert this to a hidden file so [learn how to view these hidden files on a Mac](https://www.macworld.com/article/671158/how-to-show-hidden-files-on-a-mac.html) or [how to view hidden files on Windows](https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5).
 
