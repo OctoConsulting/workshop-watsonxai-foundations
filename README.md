@@ -19,7 +19,6 @@ Completing these technical hands-on labs will take roughly 12 hours plus another
 | 90 mins  | Lab 1: [Intro Prompt Engineering Using watsonx.ai Prompt Builder](./self-guided-labs/level-1/lab-01-intro-to-prompt-engineering) |  
 | 90 mins  | Lab 2: [Advanced Prompt Engineering Challenge](./self-guided-labs/level-1/lab-02-advanced-prompt-engineering)   |  
 | 60 mins  | Lab 3: [Langchain Prompt Templates](./self-guided-labs/level-1/lab-03-langchain-prompt-template) | 
-| 30 mins  | Lab 4: [Accessing watsonx.ai via REST API](./self-guided-labs/level-1/lab-04-watsonxai-rest-api) | 
 | 60 mins  | Lab 5: [watsonx.ai and Langchain](./self-guided-labs/level-1/lab-05-watsonxai-and-langchain) | 
 | 60 mins  | Lab 6: [Retrieval Augmented Generation (RAG) for Contextual Search](./self-guided-labs/level-1/lab-06-retrieval-agumented-generation) |
 | 30 mins  | Lab 7: [watsonx.ai Demo in Streamlit](./self-guided-labs/level-1/lab-07-watsonxai-demo-with-streamlit) | 
