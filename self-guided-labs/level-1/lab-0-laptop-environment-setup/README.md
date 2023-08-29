@@ -22,7 +22,7 @@ Complete the steps in this guide to ensure your desktop environment has all the 
     - [10: .gitignore Files ](#10-gitignore-files-)
 
 ### 0: (For Mac Users Only) Install/Update Xcode <a id="install-update-xcode"></a>
-Setting up your environment via the steps below can reveal various distinct problems, several of which will be the result of not having your Mac properly setup for development. Xcode is a collection of developer tools that enable building applications for Apple's various operating systems (MacOS, iOS, etc) but also comes with some command line tools and a C compiler. The later are necessary to install some of the dependencies for this training.
+Setting up your environment via the steps below can reveal various distinct problems, several of which will be the result of not having your Mac properly setup for development. Xcode is a collection of developer tools that enable building applications for Apple's various operating systems (MacOS, iOS, etc) but also comes with some command line tools and a C compiler. The latter are necessary to install some of the dependencies for this training.
 
 ❗ Updating Xcode takes several hours! Do this first, and go make some coffee... ❗
 
