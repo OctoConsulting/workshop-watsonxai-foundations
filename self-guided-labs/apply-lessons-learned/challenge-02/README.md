@@ -1,6 +1,6 @@
 # Challenge 2 - Multi-turn interaction between two models
 
-Your mission in this Challenge is to implement a multi-turn interaction between two models.  You saw an introduction to this in the [GenAI and LangChain lab](../../self-guided-labs/level-1/lab-03-genai-and-prompt-patterns) where you connected to models.  In that case, the first model was asked to generate a question and the second model generated a response.  Your task is to extend that approach to achieve a multi-turn interaction.  
+Your mission in this Challenge is to implement a multi-turn interaction between two models.  You saw an introduction to this in the [WatsonX and LangChain lab](../../self-guided-labs/level-1/lab-03-langchain-prompt-template) where you connected to models.  In that case, the first model was asked to generate a question and the second model generated a response.  Your task is to extend that approach to achieve a multi-turn interaction.  
 
 <p align="center">
   <img src="images/q&a agents.png" width="750"/>

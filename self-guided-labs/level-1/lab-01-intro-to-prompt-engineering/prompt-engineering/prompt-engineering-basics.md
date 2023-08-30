@@ -3,7 +3,7 @@
 **Note:** The following images show actual results from watsonx.ai. The slight gray text is what we provided to the model.  The blue highlighted text is how the model responded.
 
 ### 1.0 LLM Foundations
-Before we jump into exploring the capabilities of watsonx.ai, we first need to lay a foundation for how Large Language Modles (LLMs) work, and how we can tune the model and parameters to change their output. Gaining this understanding will make us more effective prompt engineers.
+Before we jump into exploring the capabilities of watsonx.ai, we first need to lay a foundation for how Large Language Models (LLMs) work, and how we can tune the model and parameters to change their output. Gaining this understanding will make us more effective prompt engineers.
 
 <img src="../images/0.1.png" width="80%" alt="prompt" />
 
@@ -13,7 +13,7 @@ When you open up watsonx.ai, this is the view you will be shown.  The large cent
 
 Each time you enter a prompt, your “input tokens” and “generated tokens” will update. Tokens are an important concept to understand as they constrain the performance of your model plus determine the cost of using models.  As you will learn throughout the Labs, tokens are not a 1:1 match with words in natural language, but on average, one token is equal to 4 characters.  Before sending your prompt to the model, the prompt's text is Tokenized or broken into smaller subsets of characters better understood by a model.
 
-It is important to understand monitor your token usage to know how much information you are feeding into the model with each prompt, as well as how much text is generated for you. Depending on the model selected in Prompt Builder, you will see a max of 2048 or 4096 tokens.  Keep in mind that the more expressive you are with your prompt instructions, the less room the model has to respond back to you.
+It is important to monitor your token usage to know how much information you are feeding into the model with each prompt, as well as how much text is generated for you. Depending on the model selected in Prompt Builder, you will see a max of 2048 or 4096 tokens.  Keep in mind that the more expressive you are with your prompt instructions, the less room the model has to respond back to you.
 
 ### 1.2 Everything is text completion
 
@@ -162,14 +162,11 @@ The descriptions above provide a good introduction to model parameters.  However
 
 ### 3.1 Try different models
 
-The watsonx.ai documentation describes the available models: [watsonx.ai models](https://workbench.res.ibm.com/docs/models)
+The watsonx.ai documentation describes the available models: [watsonx.ai models](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-models.html?context=wx&audience=wdp)
 
 <img src="../images/3.png" width="80%" alt="prompt" />
 
-### 3.2 Guidelines for Using LLMs at IBM
-Refer to the [Guidelines for using LLMs in IBM work](https://github.ibm.com/spackows/2023-Workshop-LLMs-for-CD/blob/main/Day-1-instructions.md#guidelines-for-using-llms-in-ibm-projects)
-
-### 3.3 Check your use case
+### 3.2 Check your use case
 
 LLMs have great potential, but they have no logic, no knowledge, and no domain expertise.  Some use cases are a better fit than others: LLMs excel at tasks that involve generating generic text or common code patterns and transforming given input.
 

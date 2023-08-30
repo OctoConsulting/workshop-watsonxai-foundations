@@ -1,9 +1,10 @@
 # Import environment loading library
 from dotenv import load_dotenv
 # Import IBMGen Library 
-from genai.model import Credentials
-from genai.schemas import GenerateParams, ModelType 
-from genai.extensions.langchain import LangChainInterface
+from ibm_watson_machine_learning.metanames import GenTextParamsMetaNames as GenParams
+from langchain.llms.base import LLM
+# Import lang Chain Interface object
+from langChainInterface import LangChainInterface
 # Import langchain prompt templates
 from langchain.prompts import PromptTemplate
 # Import system libraries
@@ -11,26 +12,36 @@ import os
 # Import streamlit for the UI 
 import streamlit as st
 
+
+
 # Load environment vars
-load_dotenv(".env")
+load_dotenv()
 
 # Define credentials 
-api_key = os.getenv("GENAI_KEY", None)
-api_url = os.getenv("GENAI_API", None)
-creds = Credentials(api_key, api_url)
+api_key = os.getenv("API_KEY", None)
+ibm_cloud_url = os.getenv("IBM_CLOUD_URL", None)
+project_id = os.getenv("PROJECT_ID", None)
+if api_key is None or ibm_cloud_url is None or project_id is None:
+    print("Ensure you copied the .env file that you created earlier into the same directory as this notebook")
+else:
+    creds = {
+        "url": ibm_cloud_url,
+        "apikey": api_key 
+    }
 
 # Define generation parameters 
-params = GenerateParams(decoding_method="sample",
-                        max_new_tokens=300,
-                        min_new_tokens=30,
-                        #stream=False,
-                        temperature=0.2,
-                        #top_k=100,
-                        #top_p=1, 
-                        repetition_penalty=1)
+params = {
+    GenParams.DECODING_METHOD: "sample",
+    GenParams.MIN_NEW_TOKENS: 30,
+    GenParams.MAX_NEW_TOKENS: 300,
+    GenParams.TEMPERATURE: 0.2,
+    # GenParams.TOP_K: 100,
+    # GenParams.TOP_P: 1,
+    GenParams.REPETITION_PENALTY: 1
+}
 
-# Create an instance of the LLM
-llm = LangChainInterface(model=ModelType.FLAN_UL2, params=params, credentials=creds)
+# define LangChainInterface model
+llm = LangChainInterface(model='google/flan-ul2', credentials=creds, params=params, project_id=project_id)
 
 # Title for the app
 st.title('🤖 Building a Simple Front End')
