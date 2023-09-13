@@ -111,21 +111,35 @@ Download this [environment test notebook](./environment-test.ipynb) or use the o
 ### 9: Security and .env Files<a id="environment-files"></a>
 A guaranteed way to get contacted by IBM's Github security team is to check-in code that contains an access credential for an IBM Cloud service. To avoid this, store credentials in a .env file, then ensure this .env **is not checked into Github.** Python provides support for .env files through a library called dotenv that you will encounter during some lessons in this Boot Camp.
 
-Download this [env file](./env), open it in a text editor and 
-1. add your IBM Cloud API key from [step 4](#obtain-api-key) in the API_KEY field
-2. add your project ID from [step 2](#create-project) in the PROJECT_ID field
+Create a new .env file and open it for editing using the following commands:
 
-Add a period to the downloaded "env" file to it is ".env". You may get a warning that this will convert this to a hidden file so [learn how to view these hidden files on a Mac](https://www.macworld.com/article/671158/how-to-show-hidden-files-on-a-mac.html) or [how to view hidden files on Windows](https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5).
+```
+touch .env
+vim .env
+```
 
-If you are still having trouble renaming the “env” file to “.env”, type the following commands in your terminal:
+Alternatively, you can accomplish the above using your operating system's file browsing interface or the **VS code interface** (Simply right click on lab 0, select "create new file", and name the file ".env"). If you have created the file, but are having trouble viewing it, [learn how to view hidden files on a Mac](https://www.macworld.com/article/671158/how-to-show-hidden-files-on-a-mac.html) or [how to view hidden files on Windows](https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5).
+
+After you have opened the .env file using an appropriate editor, add the following content:
+
 ```
-cd <path to folder containing your env file>
-mv env .env
+API_KEY=<your-ibm-cloud-api-key>
+IBM_CLOUD_URL=https://us-south.ml.cloud.ibm.com
+PROJECT_ID=<your-project-id>
 ```
-To check that the file was changed to .env, type the following command: 
+
+These fields are what you will need when using the dotenv library. Once these credentials are properly filled out, you will be able to load in watsonx.ai models throughout the labs! As you can see, the **IBM_CLOUD_URL** field is filled out for you, however both **API_KEY** and **PROJECT_ID** need to be filled in by you!
+
+1. Add your IBM Cloud API key from [step 4](#obtain-api-key) in the API_KEY field
+2. Add your project ID from [step 2](#create-project) in the PROJECT_ID field
+
+If you are finished putting the necessary content into the .env file, make sure to save your changes and close the file. If you created the file using your command line, and you want to ensure that the file shows up successfully, type the following command to check:
+
 ```
 ls -la 
 ```
+
+Now that you have successfully finished creating your .env file, **make sure that you add ".env" to your .gitignore file** in [step 10](#gitignore).
 
 ### 10: .gitignore Files <a id="gitignore"></a>
 Whenever checking code into a Github repo, use .gitignore to exclude files from being checked-in. If you don't know how to do this, [learn how to add your .env to .gitignore](https://salferrarello.com/add-env-to-gitignore/).
