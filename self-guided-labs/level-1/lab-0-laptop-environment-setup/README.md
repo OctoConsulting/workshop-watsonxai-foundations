@@ -130,8 +130,8 @@ PROJECT_ID=<your-project-id>
 
 These fields are what you will need when using the dotenv library. Once these credentials are properly filled out, you will be able to load in watsonx.ai models throughout the labs! As you can see, the **IBM_CLOUD_URL** field is filled out for you, however both **API_KEY** and **PROJECT_ID** need to be filled in by you!
 
-1. add your IBM Cloud API key from [step 4](#obtain-api-key) in the API_KEY field
-2. add your project ID from [step 2](#create-project) in the PROJECT_ID field
+1. Add your IBM Cloud API key from [step 4](#obtain-api-key) in the API_KEY field
+2. Add your project ID from [step 2](#create-project) in the PROJECT_ID field
 
 If you are finished putting the necessary content into the .env file, make sure to save your changes and close the file. If you created the file using your command line, and you want to ensure that the file shows up successfully, type the following command to check:
 
@@ -139,7 +139,7 @@ If you are finished putting the necessary content into the .env file, make sure 
 ls -la 
 ```
 
-Now that you have successfully finished with the creation of your .env file, **make sure that you add ".env" to your .gitignore file** in [step 10](#gitignore).
+Now that you have successfully finished creating your .env file, **make sure that you add ".env" to your .gitignore file** in [step 10](#gitignore).
 
 ### 10: .gitignore Files <a id="gitignore"></a>
 Whenever checking code into a Github repo, use .gitignore to exclude files from being checked-in. If you don't know how to do this, [learn how to add your .env to .gitignore](https://salferrarello.com/add-env-to-gitignore/).
